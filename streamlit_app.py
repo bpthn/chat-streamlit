@@ -52,7 +52,7 @@ def get_response(user_input):
     return response
 
 #================== location =======================
-mport folium
+import folium
 from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
 from folium.plugins import MarkerCluster
