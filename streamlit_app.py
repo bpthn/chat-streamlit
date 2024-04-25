@@ -221,8 +221,6 @@ def main():
         # Handle Pharmacy Location logic
         elif st.session_state.menu_choice == "Pharmacy Location":
             # Ask for the address
-            with st.chat_message("assistant"):
-                st.markdown("Please enter your address:")
     
             # Get the user's location from the address
             user_lat, user_lon = get_user_location(user_input)
@@ -247,27 +245,25 @@ def main():
                   st.table(nearest_pharmacies_df)
 
                   # Add the response to the chat history
-                  st.session_state.messages.append(
-                      {"role": "assistant", "content": "Here's the map with the nearest pharmacies and their distances."}
-                  )
+                  # st.session_state.messages.append(
+                  #     {"role": "assistant", "content": "Here's the map with the nearest pharmacies and their distances."}
+                  # )
+                  response = "Here's the map with the nearest pharmacies and their distances."
                 else:
                     st.error("No pharmacies found near your location.")
-                    st.session_state.messages.append(
-                        {"role": "assistant", "content": "No pharmacies found near your location."}
-                    )
+                    # st.session_state.messages.append(
+                    #     {"role": "assistant", "content": "No pharmacies found near your location."}
+                    # )
+                    response = "No pharmacies found near your location."
             else:
                 st.warning("Address not found. Please check and try again.")
-                st.session_state.messages.append(
-                    {"role": "assistant", "content": "Address not found. Please try again."}
-                )
+                # st.session_state.messages.append(
+                #     {"role": "assistant", "content": "Address not found. Please try again."}
+                # )
+                response = "Address not found. Please try again."
  
           
           
-          
-        else:
-            # Call get_response() function for other menu items
-            response = 'no'
-
         # Display bot response in chat message container
         with st.chat_message("assistant"):
             st.markdown(response)
