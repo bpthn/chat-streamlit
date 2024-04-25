@@ -183,6 +183,9 @@ def main():
       if st.session_state.menu_choice == 'Diagnosis':
         txt = "Please provide your age and gender in the following format: [age] [gender]\nFor example: 30 male\n\nNote: Ages below 12 and over 130 are not supported.\n"
         response = txt
+      elif st.session_state.menu_choice == 'Pharmacy Location':
+        txt = "Please enter your address:"
+        response = txt
       with st.chat_message("assistant"):   
         st.markdown(response)
       st.session_state.showSelect = True
