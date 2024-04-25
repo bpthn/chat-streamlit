@@ -1,0 +1,17 @@
+transformers==4.14.0
+torch
+torchvision
+torchinfo
+nltk
+numpy
+matplotlib
+joblib
+scikit-learn
+pandas
+streamlit >= 1.9.2
+
+
+
+# matplotlib backend
+matplotlib==3.4.0
+# tokenizers>=0.10.0

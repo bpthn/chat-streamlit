@@ -1,0 +1,658 @@
+{
+    "intents": [
+        {
+            "tag": "type",
+            "responses": [
+                "There are four types of GP services, categorized into Levels A, B, C, and D."
+            ]
+        },
+        {
+            "tag": "A",
+            "responses": [
+                "Level A service is for straightforward issues requiring a short patient history and limited examination. It typically involves a brief consultation and basic management."
+            ]
+        },
+        {
+            "tag": "B",
+            "responses": [
+                "Level B service includes consultations lasting less than 20 minutes and can involve various clinical activities such as history-taking, examination, investigations, and management plans."
+            ]
+        },
+        {
+            "tag": "C",
+            "responses": [
+                "Level C service involves consultations lasting at least 20 minutes and includes detailed history-taking, thorough examination, necessary investigations, and comprehensive management plans."
+            ]
+        },
+        {
+            "tag": "D",
+            "responses": [
+                "Level D service is for consultations lasting at least 40 minutes and includes extensive history-taking, comprehensive examination, thorough investigations, and detailed management plans."
+            ]
+        },
+        {
+            "tag": "fee",
+            "responses": [
+                "A1: For Level A service, the fee is $17.50 per attendance.\nA2: For Level B service (less than 20 minutes), the fee is $38.20 per attendance.\nA3: For Level C service (at least 20 minutes), the fee is $73.95 per attendance.\nA4: For Level D service (at least 40 minutes), the fee is $108.85 per attendance."
+            ]
+        },
+        {
+            "tag": "cap",
+            "responses": [
+                "A1: For Level A service, the cap is $52.50.\nA2: For Level B service (less than 20 minutes), the cap is $114.60.\nA3: For Level C service (at least 20 minutes), the cap is $221.85.\nA4: For Level D service (at least 40 minutes), the cap is $326.55."
+            ]
+        },
+        {
+            "tag": "fee a",
+            "responses": [
+                "For Level A service, the fee is $17.50 per attendance."
+            ]
+        },
+        {
+            "tag": "fee b",
+            "responses": [
+                "For Level B service, the fee is $38.20 per attendance."
+            ]
+        },
+        {
+            "tag": "fee c",
+            "responses": [
+                "For Level C service, the fee is $73.95 per attendance."
+            ]
+        },
+        {
+            "tag": "fee d",
+            "responses": [
+                "For Level D service, the fee is $108.85 per attendance."
+            ]
+        },
+        {
+            "tag": "Meaning",
+            "responses": [
+                "Overseas Student Health Cover (OSHC) helps you pay for hospital and medical services which you may need while studying in Australia.",
+                "As an overseas student, it is a requirement of your overseas student visa that you have OSHC when you apply for your visa and then keep it for the entire duration of your stay in Australia under the student visa.\nThey will not be covered under your singles policy. You should take out an OSHC family policy to cover your spouse or de-facto partner or any child or step child who is unmarried and under the age of 18. We also have Extras cover for families",
+                "Overseas Student Health Cover or OSHC Australia, is specifically designed for international students to help them cover their hospital and medical bills which may occur during their stay in Australia",
+                "OSHC Australia stands for Overseas Student Health Cover. It is mandatory for all international students in Australia.",
+                "It is compulsory for international students to buy OSHC Australia for the duration of their stay in the country.",
+                "Overseas Student Health Cover is health cover for overseas/international students. It\u00d5s part of Visa requirement 500 allowing you to study in Australia.",
+                "Overseas Student Health Cover (OSHC) is health insurance that gives you access to a range of medical services during your time as a student in Australia. OSHC is a mandatory requirement of every international student wishing to travel to and study in Australia.\n\nYou need to purchase an OSHC policy to be eligible for a student visa, and the policy needs to cover you for the full duration of your expected time in Australia. When you purchase an OSHC policy with Bupa, you\u2019ll instantly receive a verification letter to submit with your visa application.\n"
+            ]
+        },
+        {
+            "tag": "Refundable",
+            "responses": [
+                "A Refund for your OSHC in Australia will depend on your provider. Each provider has different terms and conditions regarding their refund policy. "
+            ]
+        },
+        {
+            "tag": "Benefit",
+            "responses": [
+                "OSHC Australia helps student visa holders cover their medical and hospital expenses for their time in Australia."
+            ]
+        },
+        {
+            "tag": "Enter the country",
+            "responses": [
+                "It is best advised to not enter the country before your OSHC in Australia starts. It is a mandatory requirement for international students thus, you must have it in your hand before or on the date of arrival in Australia."
+            ]
+        },
+        {
+            "tag": "Transfer",
+            "responses": [
+                "You can contact your OSHC Australia provider for options available to change or renew your insurance cover.",
+                "Yes, you can transfer to another policy. Be aware that some of the policy conditions may be different. Your previous policy duration will count towards any relevant waiting periods on your new cover.",
+                "Of course! Your previous provider will give you a clearance certificate. We\u2019ll use this to waive any relevant waiting periods you\u2019ve already served on your previous policy (if it\u2019s within 60 days of your previous cover\u2019s end date).",
+                "You can transfer your cover to Medibank from any other Australian OSHC insurer. Your period of membership will count towards any waiting periods you may need to serve with Medibank OSHC.\nIf your cover with your last insurer has lapsed or expired, other conditions apply. For more information,\u00a0contact us"
+            ]
+        },
+        {
+            "tag": "Important",
+            "responses": [
+                "Yes! As an international student in Australia, you must have Overseas Student Health Cover (OSHC Australia) for the time of your study in the country.",
+                "Yes.  As an international student in Australia, you will be required to have an Overseas Student Health Cover (OSHC) policy for the entire duration of your student visa. International students, and their dependents (for example, spouses and children under 18 years old), must obtain OSHC. You will need to show proof that you have an OSHC policy when you apply for your student visa.\nIf you are a citizen of either Norway, Sweden or Belgium you may be exempt from having to purchase an OSHC policy.",
+                "You need to purchase Overseas Student Health Cover before you can apply for a student visa. This means you need to pay for OSHC upfront, but your cover won\u00d5t actually commence until the day you arrive in Australia.",
+                "As an overseas student, it is a requirement of your overseas student visa that you have OSHC when you apply for your visa and then keep it for the entire duration of your stay in Australia under the student visa.",
+                "The Australian Healthcare System can be broken up into two parts: \n\nThe public healthcare system known as Medicare is only available to Australian permanent residents and reciprocal card holders. \nThe private health system which is supported by Private Health Insurers (including CBHS International and Overseas cover) will cover you for both emergency and non-emergency health issues, including things like treatment in a private hospital, the cost of an ambulance and other medical or ancillary services. \nThere are three reasons why you should take out student cover (OSHC):\n\nIt is a requirement for Overseas students while they study in Australia.\nOSHC keeps you protected against the costs of medical treatment if you get sick or have an accident. Some treatments can cost thousands of dollars!\nYour cover will help lessen the impact of costs on the Australian health system. This helps our country continue to sustainably welcome international students."
+            ]
+        },
+        {
+            "tag": "Companies",
+            "responses": [
+                "The major providers of OSHC Australia are BUPA, NIB, AHM, Allianz Care, and Medibank. They are all approved providers for providing OSHC to overseas students in Australia. All major providers are leading providers however, the best OSHC in Australia for you will be the one that suits your needs and fits your budget.",
+                "The major providers of OSHC Australia are BUPA, NIB, AHM, Allianz Care, and Medibank. They are all approved providers for providing OSHC to overseas students in Australia. All major providers are leading providers however, the best OSHC in Australia for you will be the one that suits your needs and fits your budget.",
+                "You can choose to purchase your OSHC from one of 6 insurance companies:\nahm OSHC\nAllianz Care Australia\nBUPA Australia\nCBHS International Health\nMedibank Private\nNIB OSHC",
+                "1. ALLIANZ OSHC\n2. AHM OSHC\n3. MEDIBANK OSHC\n4. BUPA OSHC\n5. NIB OSHC"
+            ]
+        },
+        {
+            "tag": "Cost",
+            "responses": [
+                "The cost of OSHC Australia will depend on the type of coverage you require and the provider you are buying it from. You can contact your OSHC provider to know the best deal on your OSHC.",
+                "Fees for OSHC Australia will depend on the cover type and provider you are buying your OSHC from."
+            ]
+        },
+        {
+            "tag": "Family",
+            "responses": [
+                "Coverage for family OSHC varies based on the type of policy you purchase. The family usually covers the expense of emergency ambulance services, medical expenses, certain prescription medicines, and more.",
+                "They will not be covered under your singles policy. You should take out an OSHC family policy to cover your spouse or de-facto partner or any child or step child who is unmarried and under the age of 18. We also have Extras cover for families",
+                "You can purchase Overseas Student Health Cover for singles, single parents, couples, and families \u2013 so if you have any dependants living with you in Australia, they can be covered by the same policy.\n\nHowever, if your family member has their own student visa, or if they\u2019re a member of your extended family, they\u2019ll need to purchase their own health insurance. If your family member is working in or visiting Australia, they might be eligible for our Overseas Visitors Cover instead."
+            ]
+        },
+        {
+            "tag": "Single parents",
+            "responses": [
+                "Single parent OSHC in Australia covers the parent with n number of children. You can get coverage for hospital and medical bills, emergency ambulance services, prescription medications, and more."
+            ]
+        },
+        {
+            "tag": "Buy",
+            "responses": [
+                "You can buy OSHC from these OSHC Providers such as BUPA, NIB, AHM, Allianz Care, and Medibank. They are all provided the website and agents to assit you. However, the price and benefit are slighty different. The best OSHC for you will be the one that suits your needs and fits your budget.\n",
+                "As part of your student visa application process, your dedicated education agents will facilitate the purchase of your OSHC with your preferred insurer.\u00ca The education agent will make sure that the cover that you purchase is correct and compliant with the student visa requirements to ensure that your student visa is granted without any unnecessary delay.",
+                "You need to purchase Overseas Student Health Cover before you can apply for a student visa. This means you need to pay for OSHC upfront, but your cover won\u2019t actually commence until the day you arrive in Australia.\n",
+                "You can buy Medibank Essentials OSHC directly online.\nPurchase of the Medibank Comprehensive OSHC policy however is only available through selected universities and schools. Check with your institution to see if you can access this cover.",
+                "When you buy your OSHC online, you become a member from the date of your arrival in Australia. However, if you don\u2019t pay your OSHC premium before your date of arrival, your commencement date will be the date your OSHC premium is first paid.\nIf you purchase your OSHC while you are already in Australia, it will start on the day you join."
+            ]
+        },
+        {
+            "tag": "Couple",
+            "responses": [
+                "Different policies can create complications as a single policy is only meant for the person who is the primary visa holder. If a dependent is buying OSHC, he is giving wrong information and portraying himself as a primary visa holder. Therefore, it is advisable that a couple must have couple OSHC in Australia."
+            ]
+        },
+        {
+            "tag": "Monthly pay",
+            "responses": [
+                "No. Your insurer will require that you purchase your entire OSHC policy upfront. You need to purchase a policy that covers the entire period of your student visa so that you can provide the DHA with a valid OSHC certificate when you lodge your student visa application.\nIn the unlikely event, you needed to leave Australia before completing your studies the insurer would refund the remaining portion of your OSHC policy from the date that you depart Australia."
+            ]
+        },
+        {
+            "tag": "When start",
+            "responses": [
+                "You will need to hold a valid OSHC policy from the date that your student visa is granted. This may require that your policy begins before you travel to Australia to commence your course.\nIf you are overseas when you purchase your insurance policy and pay, the insurer will ask you to nominate a date of arrival. This date will be the date that your policy will begin. If your arrival date changes or is delayed you will be able to ask your insurer to change the start date of your policy.\nIf you are already in Australia with a student visa and are changing insurance providers, then your start date of the policy will be the day after your current OSHC policy expires.\nIf you are in Australia with another visa type such as a visitor visa or work and holiday then the start date of your policy should be the date that you lodge your student visa application."
+            ]
+        },
+        {
+            "tag": "When finish",
+            "responses": [
+                "As an international student, you must make sure that your OSHC does not expire while you are in Australia. If your OSHC policy expires you will breach your student visa conditions and risk having your student visa cancelled by the Department of Home Affairs (DHA).\nYour Overseas Student Health Cover (OSHC) must cover the entire duration of your student visa. The last day of your student visa will depend on the duration of your course and on the time of the year that your course will finish. If your course is less than ten months your visa will usually expire one month after the course finishes. If it is more than ten months it may expire either 2 months later or on 15 March the following year."
+            ]
+        },
+        {
+            "tag": "outside aus",
+            "responses": [
+                "No, your OSHC will only cover you for medical and hospital treatments while you are in Australia. If you take a trip outside Australia you should obtain additional travel insurance for these trips.",
+                "OSHC only covers you while you are in Australia. If you travel outside of Australia you\u00d5ll need to take out Travel Insurance \u00d0 offers \u00d2Cover-More\u00d3",
+                "No. Your overseas student or visitors health cover can only commence once you have arrived in Australia."
+            ]
+        },
+        {
+            "tag": "ADD partner",
+            "responses": [
+                "Yes. If you are planning to travel to study in Australia with your immediate family (i.e spouse or children) they will also need to be covered by an OSHC policy. To do this you will need to purchase a Dual Family or Multiple Family OSHC policy that covers every person that will be included in the student visa application.\nAny adult dependents must be included in your OSHC policy. If you purchase an additional single OSHC policy for an adult dependant instead of a couples policy and your dependant needs to make a claim on the additional policy the insurer may refuse to cover your dependant on the basis that your dependant is not a primary visa applicant, enrolled in an Australian course and that you should have taken out a couples policy."
+            ]
+        },
+        {
+            "tag": "Select start and finish",
+            "responses": [
+                "As a student visa holder, you need an active OSHC policy for the full duration of your stay in Australia \u00d0 not just the length of your course.\n\nYour cover start date should be the same day you plan to arrive in Australia. If you don\u00d5t know your exact arrival date, select the date 28 days before your course commences.\n\nThe Department of Home Affairs provides guidance on the length of student visas, and these timeframes can be used to calculate how long you\u00d5ll need OSHC for. As a rough guide:\n\nIf your course is 10 months or less, you\u00d5ll need cover for 1 month longer than your course.\nIf your course is more than 10 months, and finishes between January and October, you\u00d5ll need cover for 2 months longer than your course.\nIf your course is more than 10 months, and finishes in November or December, you\u00d5ll need cover until 15 March the following year."
+            ]
+        },
+        {
+            "tag": "Expired",
+            "responses": [
+                "It\u00d5s important that you have an active OSHC policy during your time in Australia. If your cover expires, it may be a breach of your visa conditions, which could affect your ability to extend your visa or apply for permanent residency.\n\nAn expired policy also means you won\u00d5t be covered for any hospital or medical services. These could be very expensive if you get sick or injured.\n",
+                "The Department of Immigration & Boarder Protection\u00carequires holders of a student visa to maintain OSHC for their entire stay in Australia. If you allow your cover to lapse, you will be in breach of your visa conditions. You\u00d5ll also need to renew your OSHC and have to back-pay for any period that you were not covered by OSHC. In addition, you are not entitled to receive benefits for periods when you were not covered by OSHC even if you re-activate your policy and backdate your payments for that period. This may also result in you having to pay very significant hospital, medical or other costs yourself.",
+                "It\u2019s important that you have an active OSHC policy during your time in Australia. If your cover expires, it may be a breach of your visa conditions, which could affect your ability to extend your visa or apply for permanent residency.\nAn expired policy also means you won\u2019t be covered for any hospital or medical services. These could be very expensive if you get sick or injured.\nIf you need to extend or modify your cover, get in touch\u00a0today.",
+                "If your cover lapses and you wish to reopen your membership, you will need to pay:\n\nThe value of the premiums that are outstanding for the lapsed period; and\nA premium payment advancing the membership date to the expiry date of your student visa (i.e. visa length health cover).\n\nRemember that you need to maintain your OSHC cover to fulfil the requirements of your student visa.\nFor further information, please\u00a0contact us",
+                "If you\u2019re staying in Australia on another visa after your student visa expires, you\u2019re no longer able to be covered by OSHC. However, Medibank has a range of health covers which will help keep you protected should any unforseen medical circumstances arise.\nIf you take out another Medibank hospital cover within two months of your OSHC expiring, you won\u2019t have to serve any additional waiting periods for benefits to which you were entitled to under your OSHC.\nCall Medibank on 134 190 to discuss the best health cover options to suit your needs.\nMedibank Visitors health insurance"
+            ]
+        },
+        {
+            "tag": "Cancel",
+            "responses": [
+                "No. Even if you\u00d5re on a break between study periods, you need an active OSHC policy while living in Australia.\n\nCancelling your cover while you\u00d5re still in Australia may breach your visa conditions. This could prevent you from staying in Australia, extending your visa, or applying for permanent residency.\n\nFor Bupa, you can apply to temporarily suspend your policy if you\u00d5re travelling outside of Australia for more than 3 consecutive months. You\u00d5ll need to provide your visa grant letter, as well as your travel documents. If you\u00d5re deemed eligible for a policy suspension, you\u00d5ll be paid a pro rata refund amount calculated according to your visa end date.",
+                "If your OSHC cover lapses or is cancelled, you will no longer be complying with your visa conditions and your visa can be cancelled. If you have an accident or need any medical treatment while you don\u00d5t have health cover, you will have to pay the full cost of that treatment yourself.\n\nTo ensure you're covered if your policy has lapsed, you\u00d5ll need to back-pay the premium for the time that you weren\u00d5t covered, as well as for the duration of your policy until your visa expires or you leave Australia.",
+                "If you\u2019re on a break between study periods, you need an active OSHC policy while living in Australia. Cancelling your cover while you\u2019re still in Australia may breach your visa conditions. This could prevent you from staying in Australia, extending your visa, or applying for permanent residency.\n\nYou can apply to temporarily suspend your policy if you\u2019re travelling outside of Australia for more than 3 consecutive months. You\u2019ll need to provide your visa grant letter, as well as your travel documents. If you\u2019re deemed eligible for a policy suspension, you\u2019ll be paid a pro rata refund amount calculated according to your visa end date.",
+                "As requested by Department of Health (DoH) under the OSHC Deed, Medibank will be required to provide the name and contact details of any OSHC member (new or existing) to the Department on Immigration and Border Protection (DIBP) where the student has chosen to cancel their OSHC policy.\nMedibank is committed to managing personal information according to our\u00a0Privacy Policy, as amended from time to time.\""
+            ]
+        },
+        {
+            "tag": "BUPA",
+            "responses": [
+                "Of course! If you have an OSHC policy with another health insurance provider but want to switch to Bupa, get in touch today.\n\nYour previous provider will give you a clearance certificate. We\u00d5ll use this to waive any relevant waiting periods you\u00d5ve already served on your previous policy (if it\u00d5s within 60 days of your previous cover\u00d5s end date)."
+            ]
+        },
+        {
+            "tag": "BUPA  family",
+            "responses": [
+                "You can purchase Overseas Student Health Cover for singles, single parents, couples, and families \u00d0 so if you have any dependants living with you in Australia, they can be covered by the same policy.\n\nHowever, if your family member has their own student visa, or if they\u00d5re a member of your extended family, they\u00d5ll need to purchase their own health insurance.\n\nIf your family member is working in or visiting Australia, they might be eligible for BUPA Overseas Visitors Cover instead."
+            ]
+        },
+        {
+            "tag": "BUPA oversea",
+            "responses": [
+                "No. Bupa OSHC only provides hospital and medical cover while you\u00d5re in Australia. If you\u00d5re travelling outside of Australia during your visa period, we recommend purchasing separate travel insurance."
+            ]
+        },
+        {
+            "tag": "Pre-existing condition",
+            "responses": [
+                "You or one of your dependants has a pre-existing condition if the signs or symptoms of the ailment, illness or condition you have (in the opinion of a Medical Practitioner appointed by your provider) existed at any time in the 6 month period before you or your dependant arrived in Australia on a student visa. For pre-existing medical conditions and pregnancy related services including childbirth there is a waiting period of 12 months. That means you won\u00d5t be covered for these conditions until the waiting period is over. For a pre-existing condition of a psychiatric nature, there is waiting period of 2 months.",
+                "A pre-existing condition is an illness or medical condition, the signs or symptoms of which existed at any time in the period of six months before the person became insured under an OSHC or OVHC policy. This is determined by a medical advisor appointed by CBHS International Health and takes into consideration any information provided by the member\u00d5s Health Care Provider."
+            ]
+        },
+        {
+            "tag": "Covered",
+            "responses": [
+                "Your OSHC provider pays for the following services but please remember it is important that you should contact your provider prior to any major treatments, especially staying in the hospital.Pathology and X-rays: 85% of the MBS Fee for out-of-hospital services or 100% of the MBS Fee for in-hospital services.\n\nEmergency ambulance transport: Your provider covers 100% of the cost of emergency transportation in an ambulance.\n\nProsthetic devices: Your provider covers the full cost of any No Gap prostheses and the minimum benefit for Gap permitted prostheses. Surgically implanted prostheses could include, for example, stents for coronary arteries, artificial hips/knees or titanium plates/screws for reconstructions & bone breaks.\n\nImportant: Waiting periods apply for pre-existing conditions. That is, an ailment, illness or condition which either you or one of your dependants have, the signs or symptoms of which, in the opinion of a Medical Practitioner appointed by your provider, existed at any time in the 6 month period before you or your dependant arrived in Australia. For pre-existing medical conditions and pregnancy related services including childbirth there is a waiting period of 12 months. That means you won\u00d5t be covered for these conditions until the waiting period is over. For a pre-existing condition of a psychiatric nature, there is a waiting period of 2 months.\nDoctors: 100% of the Medicare Benefits Schedule fee (MBS Fee) for General Practitioners\u00d5 standard consultations (doctors may charge above the MBS Fee) and 85% of the MBS Fee for other out-of-hospital services.\n\nHospitals: Including accommodation, operating theatre, day services, emergency and accident services, outpatient medical and post operative services.\n\nPrescription Medicines: You pay a set amount towards the cost (PBS amount) and your provider pays the rest, up to a maximum of $50 per item to a maximum of $300 for a single membership ($600 family). As an overseas student, you may face significant out of pocket costs if you need treatment with \u00d2high cost\u00d3 pharmaceuticals, particularly oncology (cancer) treatment.",
+                "OSHC policies will cover three scenarios:\n\nSingles cover: cover for just you\nCouples cover: cover for you and your spouse or de facto partner\nFamily cover: cover for you, your spouse or de facto partner, and your children under the age of 18 who are living with you in Australia, and are listed on your student visa\nSole parent cover: cover for you, and your dependant children who are under 18, living with you in Australia and listed on your student visa.\nWe don\u00d5t cover your extended family members such as your parents, grandparents, aunts, uncles, brothers or sisters."
+            ]
+        },
+        {
+            "tag": "Direct billing",
+            "responses": [
+                "Direct billing is when you visit your General Practitioner (GP) and your GP charges you the MBS Fee. Some doctors have arrangements with OSHC provider to bill directly for the full MBS amount so you won\u00d5t have any out-of-pocket expenses. Not all GPs direct bill."
+            ]
+        },
+        {
+            "tag": "Dental and glasses",
+            "responses": [
+                "You can purchase more cover to have benefits for a range of other services such as dental services, prescription glasses, physiotherapy and chiropractic. Please remember that this cover doesn\u00d5t satisfy your visa requirement and can only be purchased in addition to OSHC. Some waiting periods will apply."
+            ]
+        },
+        {
+            "tag": "Finish studying",
+            "responses": [
+                "OSHC covers you for the duration of your student visa. If you plan to stay in Australia after your student visa expires, you\u00d5ll need to apply for another visa that is specific to your future needs. Visit\u00cawww.immi.gov.au\u00cafor more information. If you obtain a different visa (eg an overseas visitor visa, a working visa) you will need to organise different health insurance, as OSHC can only cover you while you are on a student visa."
+            ]
+        },
+        {
+            "tag": "Sick",
+            "responses": [
+                "Many minor illnesses can be treated with medicine from a pharmacy. However, if you\u00d5re sick your first stop should be a visit to a family doctor (called a GP or General Practitioner) \u00d0 the GP will then advise you on what you need to do next."
+            ]
+        },
+        {
+            "tag": "GP",
+            "responses": [
+                "In Australia, the family doctor is called a GP (or General Practitioner). Except for in an emergency, the first person you will visit will be the GP \u00d0 and you can find GPs all over the place. Go to the GP for minor medical issues (such as stomach ache, sneezing, coughing, fever, a skin rash, diarrhoea). The GP can provide you with advice and a prescription for medication to treat your illness. The GP can also refer you for an x-ray or blood tests or to a specialist doctor if this is necessary.",
+                "In Australia, we call our local doctors General Practitioners or GPs.",
+                "In Australia, local doctors are known as general practitioners (GPs). You\u2019ll be able to see any GP with your OSHC membership.\n\nA\u00a0Bupa-friendly doctor\u00a0is a GP who has agreed to submit your claim directly to Bupa. This helps reduce or eliminate any payment on the day of your appointment.\n\nOSHC members can also book and attend online GP appointments 24/7 through Blua, with 100% of costs covered."
+            ]
+        },
+        {
+            "tag": "Medicines",
+            "responses": [
+                "The pharmacy is a place that sells medicines and other health-related items. Some of these medicines are only available when prescribed by a doctor.\nPharmacist can often give you advice on minor illnesses and give you non-prescription medicines to treat them.\n\nIf your doctor gives you a prescription for medicine, the pharmacy is where you need to go to get it.\n\nPharmacists can give you medicines for some minor illnesses like headache, fever, coughs and sneezes without a prescription.\n\nYou can also buy bandages, vitamins and other health-related items at the pharmacy."
+            ]
+        },
+        {
+            "tag": "Cover take care of",
+            "responses": [
+                "Our student cover (OSHC) helps members meet the costs of:\n\n1. Visits to the doctor\n2. Out of hospital medical treatment\n3. In-hospital medical treatment\n4. Emergency ambulance\nSome prescription medications (medicines prescribed by your doctor in or out of hospital).\nSee the OSHC policy page for more information."
+            ]
+        },
+        {
+            "tag": "Specialist",
+            "responses": [
+                "A specialist is a medical practitioner who has extra training in a particular aspect of healthcare, such as a dermatologist or cardiac surgeon. In Australia, you need a referral from your doctor to see a specialist."
+            ]
+        },
+        {
+            "tag": "Card",
+            "responses": [
+                "It\u00d5s important that you contact your insurance company when you arrive in Australia sothey can activate your cover, update your local contact details and send your membership cards."
+            ]
+        },
+        {
+            "tag": "Presciption",
+            "responses": [
+                "Sometimes your doctor will prescribe medicine as part of your treatment. A prescription, which can be digital or paper, outlines which medication/s your doctor would like you to take. Show your prescription at a pharmacy or chemist, and they will supply you with the right medicine. If you're not sure how to use the medicine, ask the pharmacist before you go home."
+            ]
+        },
+        {
+            "tag": "Waiting-periods",
+            "responses": [
+                "Sometimes you must wait for a period of time before you\u00d5re able to claim benefits for services under your CBHS International Health cover \u00d0 this is called a waiting period. The following waiting periods apply to our policies:\n\n1. Pre-existing medical conditions: 12 months\n2. Pregnancy-related services, including miscarriage and termination: 12 months\n3. Treatment for pre-existing conditions relating to hospital psychiatric services: 2 months\n4. All other services including GP services, accidents, emergency ambulance transport: no waiting period"
+            ]
+        },
+        {
+            "tag": "exclusions",
+            "responses": [
+                "Exclusions are services that are not covered under your policy. You can seek services for the exclusions but CBHS International Health will not pay any benefits. Examples of exclusions under our health cover are:\n\nNon-admitted hospital psychiatric services\nAssisted reproductive services\nCosmetic surgery\nStem cell, bone marrow and organ transplant\nOther services for which a Medicare benefit is not payable."
+            ]
+        },
+        {
+            "tag": "Outpatient medical treatment",
+            "responses": [
+                "These are medical services you receive in the emergency department of a hospital, but you have not been formally admitted to hospital.\n\nFor example, if you consulted with a hospital doctor, had a blood test or x-ray while you were in the emergency department of a hospital, but had not been formally admitted into hospital, this is known as outpatient services.\n\nThe formal hospital admission process usually includes you being given a hospital wristband and allocated a hospital bed in a hospital ward (rather than the emergency department). This only happens when you\u00d5ve been assessed and meet certain criteria. If you meet the hospital criteria for admission, it is because your doctor has decided you need to stay in hospital (at least overnight) - or you've had pre-planned day surgery/procedure (such as a colonoscopy) and need to be admitted for inpatient care.\n\nIf you have not been formally admitted to hospital for an overnight stay when you went to the Hospital emergency department or attended day surgery, your medical treatment you received is outpatient services."
+            ]
+        },
+        {
+            "tag": "in hospital",
+            "responses": [
+                "This is medical treatment you receive once you have been formally admitted to hospital.\n\nThe formal hospital admission process usually includes you being given a hospital wristband and allocated a hospital bed in a hospital ward (rather than the emergency department). This only happens when you\u00d5ve been assessed and meet certain criteria. If you meet the hospital criteria for admission, it is because your doctor has decided you need to stay in hospital (at least overnight) - or you've had pre-planned day surgery/procedure (such as a colonoscopy) and need to be admitted for inpatient care.\n\nInpatient services include pre-planned hospital admissions for day surgery or a medical procedure (for example colonoscopy). This is where you have day surgery or a medical procedure done, then later the same day you go home. Day surgery or medical procedures can be considered inpatient medical treatment if you need inpatient care, even if you don't need to stay overnight at the hospital."
+            ]
+        },
+        {
+            "tag": "Visa",
+            "responses": [
+                "Subclass 500 is the only eligible student visa subclass."
+            ]
+        },
+        {
+            "tag": "Single cover",
+            "responses": [
+                "Only primary visa holders without a spouse, de facto or dependent child are eligible for single cover.",
+                "Who is the primary visa holder?\n\nThe primary visa holder is the person who applied for and has been granted an eligible student visa. The primary visa holder will be the member insured and the Policy Holder.\n\nWho is the secondary visa holder?+A35\n\nA secondary visa holder is the spouse, de facto partner, or dependent child of the primary visa holder. A secondary visa holder is not eligible for single cover.\n\nWho is eligible for single cover?\n\nOnly primary visa holders without a spouse, de facto or dependent child are eligible for single cover."
+            ]
+        },
+        {
+            "tag": "Secondary visa holder",
+            "responses": [
+                "A secondary visa holder is the spouse, de facto partner, or dependent child of the primary visa holder. A secondary visa holder is not eligible for single cover."
+            ]
+        },
+        {
+            "tag": "Primary visa holder",
+            "responses": [
+                "The primary visa holder is the person who applied for and has been granted an eligible student visa. The primary visa holder will be the member insured and the Policy Holder."
+            ]
+        },
+        {
+            "tag": "Medical treatment",
+            "responses": [
+                "In most cases, your student cover will pay for a portion of your medical costs. In some cases, you may need to pay for the bill first and then claim a refund from us. In other situations, the medical provider will bill us directly for your treatment. Let them know you have cover with us and they\u00d5ll tell you what the process is.\n\nWhenever you are seeking treatment, you should always receive informed financial consent from your treating provider. This will provide you with information on any out-of-pocket expenses in relation to your treatment. \n\nFor medication from the pharmacy, you will need to pay for the medicine and then we\u00d5ll refund you for some or all of the costs. Make sure you understand what medication you're covered for as there are limitations to what we can pay. If you aren't sure, call us, and we can tell you."
+            ]
+        },
+        {
+            "tag": "how long OSHC coverd",
+            "responses": [
+                "You must be covered for the full length of your stay in Australia under your student visa."
+            ]
+        },
+        {
+            "tag": "buy before",
+            "responses": [
+                "Yes. You can buy overseas health cover directly from insurance providers online or call them."
+            ]
+        },
+        {
+            "tag": "RHCAs",
+            "responses": [
+                "Reciprocal Health Care Agreements (RHCAs) vary from country to country, so it\u00d5s important to understand what you are and aren\u00d5t covered for before deciding on health insurance. Even if you\u00d5re entitled to reciprocal benefits, Medicare does not cover you for everything and without health insurance you will need to pay for these services. The list below gives examples of services that are NOT covered under RHCA.\n\nAmbulance\nDental care\nElective treatment\nFunerals\nMedical evacuation to your home country\nParamedical services, for example blood tests\nTreatment and accommodation in private hospitals, or as a private patient in a public hospital\nTreatment that is not immediately necessary."
+            ]
+        },
+        {
+            "tag": "Change product",
+            "responses": [
+                "If you are an existing OSHC Standard policy holder, you may change or extend your cover dates, and upgrade your product to an OSHC Essentials policy if you like. There is no requirement to upgrade.\n\nIf you\u00d5re an existing OSHC Essentials policy holder you are not able to downgrade your product to OSHC Standard, however you can change or extend your cover dates."
+            ]
+        },
+        {
+            "tag": NaN,
+            "responses": [
+                NaN
+            ]
+        },
+        {
+            "tag": "Medi Student Visa Subclasses",
+            "responses": [
+                "Medibank OSHC may only be purchased by people who are or will be in Australia on the following student visa subclasses:\n- Visa subclass 500: Student \nVisa subclass 570: Independent ELICOS Sector \nVisa subclass 571: Schools Sector\nVisa subclass 572: Vocational Education and Training Sector \nVisa subclass 573: Higher Education Sector\nVisa subclass 574: Postgraduate Research Sector\nVisa subclass 575: Non Award Sector\nVisa subclass 576: Foreign Affairs or Defences \u2028Visa subclasses are subject to change by the government from time to time."
+            ]
+        },
+        {
+            "tag": "waiting period",
+            "responses": [
+                "That depends on the types of services or items included on your cover.\n-  2 months* - All included services - except those set out below\n6 months - Optical Appliances, Ultra bonus for out of pocket expenses\n12 months - Pre-existing conditions. However, the 12 month pre-existing condition waiting period does not apply to hospital or hospital substitute treatment for psychiatric treatment, rehabilitation treatment or palliative care, Obstetrics-related services, Dental Treatment and Major dental services including surgical extractions, Orthodontic treatment, CPAP type devices, Breathing appliances\n24 months - Blood glucose monitors\n36 months - Hearing aids, Laser eye surgery\u2028* If you have an accident after joining us or changing cover and require treatment, we'll waive the 2 month waiting period.",
+                "Waiting periods will apply if you're a new member, you're rejoining Medibank after not having health cover for some time, or you're changing to a higher level of cover (either within Medibank or transferring from another registered Australian health fund). If you're changing to a higher level of cover, you'll still be entitled to benefits at the level of your former cover while you're serving any waiting periods on your new cover if:\nThose services were included under your old cover; and\nYou've already served the waiting periods that applied under your old cover.\u2028Waiting periods may apply to some of our betterhealth programs.",
+                "All health funds have waiting periods. In short, a waiting period is a period of time you need to wait after taking out your cover before you can receive benefits for services or items covered. You\u2019re not able to receive benefits for any items or services you might have obtained while you\u2019re serving a waiting period or before you joined Medibank."
+            ]
+        },
+        {
+            "tag": "Medi Inpatient",
+            "responses": [
+                "An Inpatient is someone who is formally admitted to a registered hospital (including day surgery) to receive medical care or treatment, or for the purpose of obtaining professional attention. This includes Same-day admissions.Medibank OSHC pays Benefits when a member is treated in a private hospital as an Inpatient and the treatment is Included under the cover (refer to your Cover Summary).']"
+            ]
+        },
+        {
+            "tag": "Medi Outpatient",
+            "responses": [
+                "Services that are provided where a member is not admitted to hospital are called Outpatient services. These include:\n- Non-admitted hospital services such as visits to hospital accident and emergency departments or visits to a hospital Outpatient clinic\n- Out-of-hospital medical services such as those provided in a doctor\u2019s surgery, specialist\u2019s clinic, or by a general practitioner (GP)."
+            ]
+        },
+        {
+            "tag": "Informed financial consent",
+            "responses": [
+                "Before going to the hospital, it\u2019s important to ask your doctor(s) and the hospital about any potential out-of-pocket expenses you might incur. This information should be provided in writing before your treatment or hospital admission and is known as \u2018informed financial consent\u2019. If you\u2019re admitted in an emergency, there may not be time for the hospital or doctor(s) to seek your informed financial consent. Information about your out-of-pocket expenses should be provided as soon as possible after you receive treatment."
+            ]
+        },
+        {
+            "tag": "Hospital accommodation Benefits ",
+            "responses": [
+                "The Benefits we pay towards hospital accommodation will depend on whether the hospital admission is for an Included or Excluded service (refer to your Cover Summary), and the type of hospital you\u2019re admitted to as explained below. Included services \u2013 we pay Benefits towards Same-day and overnight hospital accommodation and intensive care. Excluded services \u2013 no Benefits are payable."
+            ]
+        },
+        {
+            "tag": "Hospital accommodation Exclusions",
+            "responses": [
+                "Hospital accommodation Benefits do not include things such as TV hire, newspapers, parking, and take-home items, e.g., crutches. Medibank will not pay Benefits for these (or similar) items and services. The hospital should discuss any charges with you."
+            ]
+        },
+        {
+            "tag": "Waiting period waiver",
+            "responses": [
+                "Where a 12-month Waiting period applies to Hospital treatment, it may be waived where a medical practitioner certifies, and Medibank agrees, that Emergency Treatment was required."
+            ]
+        },
+        {
+            "tag": "Emergency Treatment",
+            "responses": [
+                "Emergency Treatment means the treatment of any of the following Conditions:\nA risk of serious morbidity or mortality and requiring urgent assessment and resuscitation\\n- Suspected acute organ or system failure \nAn illness or injury where the viability of function of a body part or organ is acutely threatened\nA drug overdose, toxic substance, or toxin effect\nPsychiatric disturbance whereby the health of the patient or other people is at immediate risk \nSevere pain where the viability or function of a body part or organ is suspected to be acutely threatened\nAcute haemorrhaging requiring urgent assessment and treatment, or\nA Condition that requires immediate admission to avoid imminent morbidity or mortality."
+            ]
+        },
+        {
+            "tag": "Prescription medicines",
+            "responses": [
+                "Medibank OSHC can help pay towards eligible Prescription medicines prescribed by a doctor (GP or specialist)."
+            ]
+        },
+        {
+            "tag": "Medicines payable",
+            "responses": [
+                "You will need to pay a set contribution amount (also known as a co-payment) towards the cost of eligible Prescription medicines, before we pay any Benefits.\\nIf the charge is higher than the Benefit we pay, the difference will be an out-of-pocket expense. Refer to your Cover Summary for information on the member contribution, maximum benefits per item, and annual limits that apply to your membership."
+            ]
+        },
+        {
+            "tag": "Medicines not payable",
+            "responses": [
+                "Benefits are not payable for the following:\nFor medicines not prescribed by a doctor (GP or specialist) to treat an illness, injury, or Condition\nFor medicines available without a prescription\\n- For contraceptives prescribed for contraceptive use only\nFor medicines prescribed for Cosmetic purposes\nFor any over-the-counter medicines, vitamins, or herbal medicines\nFor any medicine not approved by the TGA (Therapeutic Goods Administration) or listed on the ARTG (Australian Register of Therapeutic Goods) for the purpose for which it has been prescribed,\nFor any Prescription medicines which fall within a Benefit exclusion.\\nIt's important to note that you may have large out-of-pocket expenses if you need treatment that uses high-cost Prescription medicines, such as those used in oncology (cancer treatment)."
+            ]
+        },
+        {
+            "tag": "Hospital claims",
+            "responses": [
+                "Medibank has arrangements with most hospitals for Benefits to be paid direct to the hospital on a member\u2019s behalf. This generally means you won't need to submit a separate claim for hospital Benefits.If needed, hospital claims can be submitted via post with a completed claim form or at a Medibank store. Where claims are submitted in-store, we\u2019ll assess them separately (at a later date) and pay Benefits to you or the hospital, as appropriate. If a claim form is sent by post, the claim form (including receipts) can be sent to: Medibank OSHC GPO 2984 Melbourne VIC 3001."
+            ]
+        },
+        {
+            "tag": "Medi claims",
+            "responses": [
+                "A Medibank OSHC Direct Billing provider is a doctor, specialist, or other medical provider that has an agreement with Medibank to send the bill directly to us. This helps reduce or eliminate the upfront payment you would normally be required to make at the time of your appointment. Depending on the doctor you see, you may on occasion experience an out-of-pocket expense above the Benefit paid by Medibank. Before booking your consultation, check with the Direct Billing provider whether any out-of-pocket expenses may apply. Remember to take your membership card and photo identification. To find a Direct Billing provider visit medibankoshc.com.au/find-provider.\\nIt\u2019s important to be aware that our agreements with Direct Billing providers are subject to change without notice. You should confirm prior to receiving treatment whether your provider is part of our Direct Billing network."
+            ]
+        },
+        {
+            "tag": "Claims documentation",
+            "responses": [
+                "Medibank retains all account and receipt documentation for the period required by law. Medibank will, on request, provide a Statement of Benefits which may assist you for taxation purposes if applicable. For online claims, members are required to retain receipts, for the period specified in OMS terms and conditions, for verification purposes."
+            ]
+        },
+        {
+            "tag": "Time limit claim",
+            "responses": [
+                "Claims must be submitted within two years of the date of service or the date the item was purchased.', 'No Benefits will be paid for any claims submitted outside 2 years timeframe."
+            ]
+        },
+        {
+            "tag": "Ambulance services - Benefits payable",
+            "responses": [
+                "Where you need an Ambulance and your medical Condition is such that you can\u2019t be transported any other way, we\u2019ll pay towards services provided by a Medibank approved Ambulance provider:\n- When Ambulance transportation to a hospital or other approved facility is required to receive immediate professional attention\n- When an Ambulance is called to provide immediate professional attention but transport by Ambulance isn\u2019t needed \nWhen, as an Inpatient, the hospital requires you to be transferred from one hospital to another (excluding non-medically necessary Ambulance transfers between public hospitals), and\\n\nFor transport by air Ambulance, where pre-approval has been obtained from Medibank by the air Ambulance provider."
+            ]
+        },
+        {
+            "tag": "Ambulance services - Benefits not payable",
+            "responses": [
+                "['Medibank does not pay Benefits for any Ambulance service not described under \u2018When are Benefits payable?\u2019. This includes:\\n- Ambulance services where immediate professional attention is not required (e.g. general patient transportation)\\n- Any Ambulance transport required after discharge from hospital (e.g. transport from hospital to home)\\n- Inter-hospital transfers when, as an Inpatient, you\u2019re transferred from one public hospital to another public hospital for non-medically necessary reasons\\n- Any Ambulance costs that are fully covered by a third-party arrangement, such as an Ambulance subscription or federal/state/territory Ambulance transportation scheme, WorkCover, or the motor vehicle accident authority, and\\n- Any air Ambulance services that are fully subsidised, such as South Care or LifeFlight.']"
+            ]
+        },
+        {
+            "tag": NaN,
+            "responses": [
+                NaN
+            ]
+        },
+        {
+            "tag": "Length",
+            "responses": [
+                "As a student visa holder, you need an active OSHC policy for the full duration of your stay in Australia \u2013 not just the length of your course.Your cover start date should be the same day you plan to arrive in Australia. If you don\u2019t know your exact arrival date, select the date 28 days before your course commences.\n\nThe Department of Home Affairs\u00a0provides guidance on the length of student visas, and these timeframes can be used to calculate how long you\u2019ll need OSHC for. As a rough guide:\nIf your course is 10 months or less, you\u2019ll need cover for 1 month longer than your course.\nIf your course is more than 10 months, and finishes between January and October, you\u2019ll need cover for 2 months longer than your course.\nIf your course is more than 10 months, and finishes in November or December, you\u2019ll need cover until 15 March the following year.\nIf your travel or study dates change and you need to modify your OSHC,\u00a0get in touch."
+            ]
+        },
+        {
+            "tag": "Outside aus",
+            "responses": [
+                "Bupa OSHC only provides hospital and medical cover while you\u2019re in Australia. If you\u2019re travelling outside of Australia during your visa period, we recommend purchasing separate travel insurance."
+            ]
+        },
+        {
+            "tag": "Bupa",
+            "responses": [
+                "Your Bupa OSHC covers you for a range of hospital, medical, pharmacy, and ambulance services during your time as a student in Australia. If you want cover for additional services like dental and optometry, you can add extras cover to your policy after your initial purchase."
+            ]
+        },
+        {
+            "tag": "Bupa update",
+            "responses": [
+                "myBupa is our online members portal. It lets you manage your cover and update your information at any time. Simply sign in to myBupa, go to your account, then select \u2018Update contact details\u2019.If you haven\u2019t created a myBupa account yet,\u00a0register today."
+            ]
+        },
+        {
+            "tag": "Bupa card",
+            "responses": [
+                "You need your Bupa OSHC membership card to access health cover at hospitals and clinics.\n\nYour school might give you instructions on how to collect your physical membership card. If not, simply sign in to myBupa, go to \u2018Cover\u2019, then \u2018Order a membership card\u2019. Make sure you\u2019ve entered your new Australian mailing address in the contact details section.\n\nIf you have an Android or iOS smartphone, there\u2019s no need to wait for a physical card. Download the myBupa app\u00a0for iOS or Android to access your digital membership card\u00a0today."
+            ]
+        },
+        {
+            "tag": "MBS",
+            "responses": [
+                "The Australian Government has a comprehensive list of medical services and treatments, with recommended prices for each. This is known as the Medicare Benefits Schedule (MBS) fee.\n\nYour OSHC will pay up to 100% of the MBS fee for eligible services, but if your doctor or specialist charges more than the MBS fee, there may be a leftover \u2018out-of-pocket\u2019 amount which you\u2019ll need to pay."
+            ]
+        },
+        {
+            "tag": "out of pocket",
+            "responses": [
+                "A gap payment, also known as an out-of-pocket cost, is the difference between what a health service costs and what your health insurance covers.\n\nFor example, if you pay $150 to visit a specialist, and your health insurance covers $100, that leaves a difference of $50. This is the out-of-pocket cost which you\u2019ll need to pay yourself.",
+                "Always ask your health provider about the cost of treatment upfront. If you\u2019re visiting a general practitioner (GP), try making an appointment with a Bupa-friendly doctor\u00a0or booking an online consultation through Blua.\nYou can also reduce or remove costs with Bupa\u2019s Medical Gap Scheme. If a doctor or hospital uses the Medical Gap Scheme\u00a0for your treatment, they agree to only charge Bupa members up to a certain amount. These hospitals are also known as Members First or Network hospitals."
+            ]
+        },
+        {
+            "tag": "interpreter",
+            "responses": [
+                "OSHC does not cover the cost of interpreters, but we have multilingual consultants at Bupa stores\u00a0who are happy to help.\n\nFor personal health questions, property assistance, and general tax and legal inquiries, you can also call Bupa\u2019s 24/7 Student Advice Line\u00a0for support in more than 150 languages."
+            ]
+        },
+        {
+            "tag": "condition",
+            "responses": [
+                "Your policy\u2019s terms and conditions are in the Overseas Student Health Cover Fund Rules.",
+                "Fund and policy rules apply. 100% of the cost will only be covered for Blua consults. Members will only be able to book general consultations via Blua. Consultations with specialists cannot be booked via Blua. Members who are under 18 years old may need to attend the consultation with a parent or guardian."
+            ]
+        },
+        {
+            "tag": "contact",
+            "responses": [
+                "Please get in touch\u00a0with any questions or feedback on your OSHC experience."
+            ]
+        },
+        {
+            "tag": "Bupa claim",
+            "responses": [
+                "The fastest way to lodge a claim is through myBupa.  Simply sign in, go to \u2018Make a claim\u2019, and fill out the online form.\n\nYou can also claim: with the myBupa app, by visiting a Bupa store in person, through your On-Campus Consultant (if available), or by filling out a claim form (PDF, 865KB) and posting it to us.",
+                "Bupa\u2019s general communications are normally sent to the main policyholder, but claims information is treated differently. Claims information might include the amount of money we\u2019ve paid, and tax statements. We understand this can be sensitive information.\nEvery individual listed on a health insurance policy over the age of 15 can choose their own communication preferences, meaning they can choose whether we send their claims information directly to them or the main policyholder. These settings can be changed in myBupa.\nBupa handles customer data in accordance with our privacy policy."
+            ]
+        },
+        {
+            "tag": "history",
+            "responses": [
+                "Sign in to myBupa to view your full claims history. If you don\u2019t have a myBupa account yet, register today.\n\nYour claims history is also available through the myBupa app."
+            ]
+        },
+        {
+            "tag": "sick",
+            "responses": [
+                "An emergency is a serious illness or injury that poses an immediate risk to your life or long-term wellbeing. In an emergency, you should call 000 (triple zero). They will send an ambulance to take you to hospital if required.\n\nA non-emergency is an illness or injury that needs treatment but isn\u2019t immediately life-threatening. In a non-emergency, try making an appointment with a Bupa-friendly doctor\u00a0or book an online consultation through Blua.\n\nRead more about\u00a0what to do if you feel sick, or learn about the difference between doctors and hospitals.",
+                "If you arrive in Australia and get sick, but don\u2019t have your membership card yet, you should still go see a doctor. You may have to pay for your treatment upfront then make a claim\u00a0to be reimbursed later.\n\nIf you've got an Android or iOS smartphone, you don\u2019t need to wait for a physical membership card. Download the myBupa app\u00a0to access your digital membership card\u00a0today.",
+                "Moving to a new country can be as challenging as it is exciting. Get prepared by reading about\u00a0what to expect when you arrive in Australia.\n\nYou can also explore Bupa\u2019s health articles for expert advice on how to take care of your mind and body during difficult times.",
+                "If you need treatment, you can choose any general practitioner you like or if it\u2019s an emergency, go to your nearest hospital. If necessary, the doctor will refer you to a specialist for further treatment. Both specialists and general practitioners may order x-rays or pathology tests.\nIf you require admission to a hospital, you may choose to be admitted to either a public hospital as a private patient, or a private hospital.\""
+            ]
+        },
+        {
+            "tag": "specialist",
+            "responses": [
+                "A specialist is a medical practitioner who is highly skilled in a specific area, like psychiatrists or dermatologists.\n\nYour GP might send you to a specialist if they think specific expertise is needed to diagnose or treat your health condition. To see a specialist you\u2019ll need a referral from your GP."
+            ]
+        },
+        {
+            "tag": "chemist",
+            "responses": [
+                "In Australia, a pharmacy is often called a \u2018chemist\u2019. This is where you go if you need medication.\n\nSome medications require you to see a doctor and get a prescription (or \u2018script\u2019). Other common medications can be bought \u2018over-the-counter\u2019, meaning you don\u2019t need to see a doctor before purchasing them.",
+                "Your OSHC policy helps to pay for a range of prescribed medication (within per person and yearly limits) including: medicines prescribed to you as an outpatient from a hospital, medicines prescribed to you by a doctor or specialist, and medicines listed on the Pharmaceutical Benefit Scheme (PBS) Schedule.\n\nSome exclusions apply. It\u2019s always best to get in touch\u00a0with us to check whether the medication you\u2019ve been prescribed is covered by your policy.",
+                "Selected prescription contraception items are generally covered by OSHC (up to per person and yearly limits).\n\nGet in touch\u00a0to check whether the medication you\u2019ve been prescribed is covered."
+            ]
+        },
+        {
+            "tag": "PEP",
+            "responses": [
+                "As a general rule, if a prescribed medication is listed on the Pharmaceutical Benefits Scheme (PBS) schedule, and is covered by Medicare for residents and citizens, then your OSHC will help pay for it (up to per person and yearly limits). This includes PrEP and PEP.\n\nMake an appointment with a Bupa-friendly doctor or book an online health consultation through Blua to discuss a prescription. PEP is also available from the emergency departments of most Australian public hospitals and sexual health clinics.\n\nGet in touch for further support, or to check whether a medication you\u2019ve been prescribed is covered by your OSHC."
+            ]
+        },
+        {
+            "tag": "sexual",
+            "responses": [
+                "For sexual health, HIV, and STI tests, schedule an appointment with your closest Bupa-friendly doctor.\n\nAsk for a quote before your appointment to calculate any out-of-pocket costs, or get in touch\u00a0to check whether a test or procedure will be covered by your OSHC."
+            ]
+        },
+        {
+            "tag": "pregnant",
+            "responses": [
+                "Pregnancy and birth are covered by OSHC, but a 12-month waiting period applies for all pregnancy-related conditions. Assisted Reproductive Services are not covered by OSHC.\n\nWhat you\u2019re covered for will depend on whether you\u2019re admitted to hospital (inpatient) or treated out of hospital (outpatient).\n\nAs an inpatient, Bupa OSHC will help cover hospital and medical costs for pregnancy and birth, including: accommodation for overnight or same-day stays, operating theatre, intensive care and labour ward fees, pharmaceuticals approved by the Pharmaceutical Benefits Scheme (PBS), provided as part of your treatment, fees charged by doctors, surgeons, anaesthetists or other specialists, most diagnostic tests (recognised by Medicare as medically necessary) such as blood tests and x-rays, and a private room, where available and clinically appropriate. Conditions apply. Contact us\u00a0for more information.\n\n\nAs an outpatient, we\u2019ll pay up to 100% of the Medicare Benefits Scheme (MBS) fee for the cost of medical services provided by doctors or specialists in or out of hospital. These providers may charge more than the MBS, meaning you\u2019ll need to pay the difference. You can always ask for a quote before beginning treatment to check what your out-of-pocket costs might be.\n",
+                "Costs associated with miscarriage and termination of pregnancy are covered by OSHC. What you\u2019re covered for will depend on whether you\u2019re treated out of hospital (outpatient) or admitted to hospital (inpatient).\nWaiting periods, fund and policy rules apply."
+            ]
+        },
+        {
+            "tag": "who",
+            "responses": [
+                "It is a condition of most student visas to have health insurance for the full duration of that visa. Medibank OSHC is designed for people who are the holder of a student visa or a person who:\n\nis an applicant for a Student Visa ; and\nis the holder of a Bridging Visa; and\nwas, immediately before being granted the Bridging Visa, the holder of a Student Visa.\n\nUnless you are the holder of a valid student visa, you are not eligible to purchase OSHC from us.\nThe requirement to have OSHC for the entire length of your student visa applies to overseas students who purchased OSHC on or after 1 July 2010. However, there are limited exceptions for students from certain countries:\nNorwegian and Swedish students\nNorwegian and Swedish students who are covered by health insurance arrangements provided by their Governments do not need to take out OSHC. Any student not eligible for cover provided by their Government must take out an OSHC policy.\nBelgian students\nBelgian students studying in Australia are covered under the Reciprocal Health Care Agreement with Australia and do not need to take out OSHC. However, Belgian students may wish to take out OSHC for a more comprehensive level of cover."
+            ]
+        },
+        {
+            "tag": "member",
+            "responses": [
+                "With Medibank OSHC you can choose:\n\na\u00a0single\u00a0policy that covers the student only\na\u00a0couple\u00a0policy that covers the student and their spouse or de facto partner as listed on the student's visa\na\u00a0family\u00a0policy that covers the student and their dependants (such as their spouse or de facto partner and any dependant children under 18 years of age) as listed on the student's visa.\n\nPlease note we don't cover members of your family such as parents, grandparents, brothers, sisters, uncles or aunts.\nCall Medibank on 134 190 to discuss our range of\u00a0Visitors health insurance."
+            ]
+        },
+        {
+            "tag": "change date",
+            "responses": [
+                "Yes. If you arrive in Australia earlier or later than the date you gave us when you joined, you need to let us know immediately by\u00a0contacting us."
+            ]
+        },
+        {
+            "tag": "Medibank premium",
+            "responses": [
+                "For Medibank Essentials OSHC, you can pay your OSHC premium online.\nPurchase of the Medibank Comprehensive OSHC policy however is only available through selected universities and schools. Check with your institution to see if you can access this cover.\nRenew your Medibank Essentials OSHC membership online now"
+            ]
+        }
+    ]
+}
