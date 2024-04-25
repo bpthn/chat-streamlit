@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "symptom-checker-chatbot-example"
+version = "0.1.0"
+description = ""
+authors = ["chuannarongvat <narongvat.chingpayakmon@student.uts.edu.au>"]
+readme = "README.md"
+packages = [{include = "symptom_checker_chatbot_example"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "2.22.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
