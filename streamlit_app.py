@@ -159,7 +159,56 @@ def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
         return base64.b64encode(data).decode()
-    
+def sampleDiag():
+    chat_ex = [
+                {"role": "assistant", "content": "Please provide your age and gender in the following format: [age] [gender]\nFor example: 30 male"},
+                {"role": "user", "content": "28 Male"},
+                {"role": "assistant", "content": "Noting: +Headache"},
+                {"role": "assistant", "content": "Please describe you complaints. If you're done, simply press Enter:"},
+                {"role": "user", "content": "mouth ulcer"},
+                {"role": "assistant", "content": "Noting: +Mouth ulcer"},
+                {"role": "assistant", "content": "Please describe you complaints. If you're done, simply press Enter:"},
+                {"role": "user", "content": "runny nose"},
+                {"role": "assistant", "content": "Noting: +Nasal catarrh"},
+                {"role": "assistant", "content": "Please describe you complaints. If you're done, simply press Enter:"},
+                {"role": "user", "content": ""},
+                {"role": "assistant", "content": "Before we proceed with symptom diagnosis, please answer the following questions with 'y' for yes or 'n' for no:"},
+                {"role": "assistant", "content": "1. Are the headaches severe?"},
+                {"role": "user", "content": "No"},
+                {"role": "assistant", "content": "2. Has the runny nose lasted 3 months or more?"},
+                {"role": "user", "content": "No"},
+                {"role": "assistant", "content": "3. Has the runny nose lasted less than 3 months?"},
+                {"role": "user", "content": "Yes"},
+                {"role": "assistant", "content": "4. Are there any changes on your skin, e.g., a rash, growth, bump, lump, or a change in colour?"},
+                {"role": "user", "content": "No"},
+                {"role": "assistant", "content": "5. Do you have a fever?"},
+                {"role": "user", "content": "No"},
+                {"role": "assistant", "content": "6. Is the mucus that's coming out of your nose clear white?"},
+                {"role": "user", "content": "Yes"},
+                {"role": "assistant", "content": "7. Do you have a sore throat?"},
+                {"role": "user", "content": "No"},
+                {"role": "assistant", "content": "8. Is the mucus that's coming out of your nose yellow or green?"},
+                {"role": "user", "content": "No"},
+                {"role": "assistant", "content": "9. Have you been sneezing?"},
+                {"role": "user", "content": "Yes"},
+                {"role": "assistant", "content": "10. Have you been having sneezing attacks, where sneezes come one after another?"},
+                {"role": "user", "content": "No"},
+                {
+                "role": "assistant",
+                "content": "Diagnoses:\n"
+                        "Common cold (53.29%), Acute viral rhinosinusitis (32.61%), Bruxism (30.55%), Aphthous stomatitis (17.06%), and Oral herpes (13.46%).\n"
+                        "Considering the likelihood of Common cold and the symptoms you've described.\n"
+                        "It's recommended that you take a Self-care: Monitor symptoms and consult a doctor if they worsen."
+                }
+            ]
+    for message in chat_ex:
+        if message["role"] == "assistant":
+            with st.chat_message("assistant"):
+                st.markdown(message["content"])
+        else:
+            with st.chat_message("user"):
+                st.markdown(message["content"])
+            
 def home_page():
     global chat_history
     # component1 = TabBar(tabs=["Home", "Group Members", "Project Background"], default=0)
@@ -237,7 +286,12 @@ def home_page():
     
         # Adjust the prompt message based on the menu choice
         if st.session_state.menu_choice == 'Diagnosis':
-            prompt_message = "Please provide your age and gender in the following format: \n[age] [gender]. For example: 30 male."
+            # prompt_message = "Please provide your age and gender in the following format: \n[age] [gender]. For example: 30 male."
+            # user_input = st.chat_input("What's your age and gender?")
+            prompt_message = "This is example of Diagnosis chatbot"
+            sampleDiag()
+            
+            
         elif st.session_state.menu_choice == 'Pharmacy Location':
             prompt_message = "Where can I find the nearest pharmacy? Just share your address, and I'll help you locate the closest one!"
         elif st.session_state.menu_choice == 'OSHC':
@@ -253,9 +307,10 @@ def home_page():
 
     user_input = None
                 # Get user input based on the menu choice
-    if st.session_state.menu_choice == 'Diagnosis':
-        user_input = st.chat_input("What's your age and gender?")
-    elif st.session_state.menu_choice == 'Pharmacy Location':
+    # if st.session_state.menu_choice == 'Diagnosis':
+    #     # user_input = st.chat_input("What's your age and gender?")
+    #     sampleDiag()
+    if st.session_state.menu_choice == 'Pharmacy Location':
         user_input = st.chat_input("What's your address?")
     elif st.session_state.menu_choice == 'OSHC':
         user_input = st.chat_input("What's your OSHC question?")
@@ -270,7 +325,10 @@ def home_page():
             response = get_response(user_input)
   
         elif st.session_state.menu_choice == 'Diagnosis':
-            response = "diagnosis"
+            
+            response = None
+
+            # response = "diagnosis"
         
             # Handle Pharmacy Location logic
         elif st.session_state.menu_choice == "Pharmacy Location":
