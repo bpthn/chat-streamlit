@@ -1,6 +1,30 @@
 {
     "intents": [
         {
+            "tag": "list 1",
+            "responses": [
+                "Both Bupa and Medibank cover this service."
+            ]
+        },
+        {
+            "tag": "list 2",
+            "responses": [
+                "Bupa covers this service while Medibank does not cover it."
+            ]
+        },
+        {
+            "tag": "list 3",
+            "responses": [
+                "Both Bupa and Medibank cover this service at 100%."
+            ]
+        },
+        {
+            "tag": "list 4",
+            "responses": [
+                "Bupa covers this service at 100%, while Medibank covers it at 85%."
+            ]
+        },
+        {
             "tag": "type",
             "responses": [
                 "There are four types of GP services, categorized into Levels A, B, C, and D."
@@ -392,12 +416,6 @@
             ]
         },
         {
-            "tag": NaN,
-            "responses": [
-                NaN
-            ]
-        },
-        {
             "tag": "Medi Student Visa Subclasses",
             "responses": [
                 "Medibank OSHC may only be purchased by people who are or will be in Australia on the following student visa subclasses:\n- Visa subclass 500: Student \nVisa subclass 570: Independent ELICOS Sector \nVisa subclass 571: Schools Sector\nVisa subclass 572: Vocational Education and Training Sector \nVisa subclass 573: Higher Education Sector\nVisa subclass 574: Postgraduate Research Sector\nVisa subclass 575: Non Award Sector\nVisa subclass 576: Foreign Affairs or Defences \u2028Visa subclasses are subject to change by the government from time to time."
@@ -439,12 +457,6 @@
             "tag": "Hospital accommodation Exclusions",
             "responses": [
                 "Hospital accommodation Benefits do not include things such as TV hire, newspapers, parking, and take-home items, e.g., crutches. Medibank will not pay Benefits for these (or similar) items and services. The hospital should discuss any charges with you."
-            ]
-        },
-        {
-            "tag": "Waiting period waiver",
-            "responses": [
-                "Where a 12-month Waiting period applies to Hospital treatment, it may be waived where a medical practitioner certifies, and Medibank agrees, that Emergency Treatment was required."
             ]
         },
         {
@@ -505,12 +517,6 @@
             "tag": "Ambulance services - Benefits not payable",
             "responses": [
                 "['Medibank does not pay Benefits for any Ambulance service not described under \u2018When are Benefits payable?\u2019. This includes:\\n- Ambulance services where immediate professional attention is not required (e.g. general patient transportation)\\n- Any Ambulance transport required after discharge from hospital (e.g. transport from hospital to home)\\n- Inter-hospital transfers when, as an Inpatient, you\u2019re transferred from one public hospital to another public hospital for non-medically necessary reasons\\n- Any Ambulance costs that are fully covered by a third-party arrangement, such as an Ambulance subscription or federal/state/territory Ambulance transportation scheme, WorkCover, or the motor vehicle accident authority, and\\n- Any air Ambulance services that are fully subsidised, such as South Care or LifeFlight.']"
-            ]
-        },
-        {
-            "tag": NaN,
-            "responses": [
-                NaN
             ]
         },
         {

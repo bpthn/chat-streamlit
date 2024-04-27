@@ -1,4 +1,53 @@
-Question,Labels
+﻿Question,Labels
+Is rehabilitation covered?,list 1
+Are hospital psychiatric services covered?,list 1
+Is palliative care covered?,list 1
+Is blood-related services covered?,list 1
+Is bone marrow transfusion or transplant covered?,list 2
+Are eye-related services covered?,list 1
+Is cataract surgery covered?,list 1
+"Are ear, nose, and throat treatments covered?",list 1
+"Are bone, joint, and muscle treatments covered?",list 1
+Is joint reconstruction covered?,list 1
+Are joint replacements covered?,list 1
+Is organ transplant covered?,list 2
+Is dialysis for chronic kidney failure covered?,list 1
+Are hernia and appendix surgeries covered?,list 1
+Are heart and vascular system treatments covered?,list 1
+Is gynaecology covered?,list 1
+Are miscarriage and termination of pregnancy covered?,list 1
+Are pregnancy and birth-related services covered?,list 1
+Is male reproductive system treatment covered?,list 1
+Is plastic and reconstruction surgery covered?,list 1
+Are all Medicare recognized services covered?,list 2
+Are accident and emergency department visits covered?,list 1
+Are brain and nervous system treatments covered?,list 1
+"Are tonsil, adenoid, and grommet surgeries covered?",list 1
+Is digestive system treatment covered?,list 1
+Is gastrointestinal endoscopy covered?,list 1
+"Are chemotherapy, radiotherapy, and immunotherapy covered?",list 1
+Is pain management covered?,list 1
+Are skin treatments covered?,list 1
+Is breast surgery covered?,list 1
+Is diabetes management covered?,list 1
+Are lung and chest treatments covered?,list 1
+"Are back, neck, and spine treatments covered?",list 1
+Is dental surgery covered?,list 1
+Is podiatric surgery covered?,list 1
+Is implantation of hearing devices covered?,list 1
+Are kidney and bladder treatments covered?,list 1
+Is weight loss surgery covered?,list 1
+Is pain management with device covered?,list 1
+Are sleep studies covered?,list 1
+What is the coverage for inpatient medical costs?,list 3
+What is the coverage for GP consultations?,list 3
+What is the coverage for specialists consultations?,list 4
+What is the coverage for pathology tests?,list 4
+What is the coverage for radiology scans?,list 4
+What is the coverage for allied health services?,list 4
+What is the coverage for outpatient psychiatric services?,list 4
+What is the coverage for outpatient pregnancy services?,list 4
+What is the coverage for surgically implanted prostheses?,list 3
 How many types of general practitioner (GP) services are there?,type
 What is Level A service for a general practitioner?,A
 Can you explain Level B service provided by a general practitioner?,B
