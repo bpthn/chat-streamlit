@@ -5,11 +5,13 @@ import apiaccess
 import constants
 
 import streamlit as st
+
+from streamlit_app import chat_history
 class AmbiguousAnswerException(Exception):
     pass
 
 
-def read_input(prompt):
+# def read_input(prompt):
     """Displays appropriate prompt and reads the input.
 
     Args:
@@ -19,17 +21,26 @@ def read_input(prompt):
         str: Stripped users input.
 
     """
-    if prompt.endswith('?'):
-        prompt = prompt + ' '
-    else:
-        prompt = prompt + ': '
+    # if prompt.endswith('?'):
+    #     prompt = prompt + ' '
+    # else:
+    #     prompt = prompt + ': '
     # print(prompt, end='', flush=True)
+
     
-    
-    # with st.chat_message("user"):
+
+    # if key is None:
+    #     key = f"input_{hash(prompt)}"
+
+    # # Display the prompt
+    # with st.chat_message("assistant"):
     #     st.markdown(prompt)
-    return sys.stdin.readline().strip()
-    # return prompt
+
+    # Get user input using text_input widget with the unique key
+    # user_input = st.text_input(prompt)
+
+    # return prompt.strip()
+
 
 
 def read_age_sex(user_input):
@@ -47,13 +58,17 @@ def read_age_sex(user_input):
 
     """
     # answer = read_input("Please provide your age and gender in the following format: [age] [gender]\nFor example: 30 male\n\nNote: Ages below 12 and over 130 are not supported.\n")
-    answer = read_input(user_input)
+    # answer = "Please provide your age and gender in the following format: [age] [gender]\nFor example: 30 male\n\nNote: Ages below 12 and over 130 are not supported.\n"
+    answer = str(user_input)
+    print(answer)
     
-        
-    
+    # with st.chat_message("assistant"):
+    #     st.markdown(answer)   
+    # answer = user_input
     
     try:
         age = int(extract_age(answer))
+        # print(age)
         sex = extract_sex(answer, constants.SEX_NORM)
         if age < constants.MIN_AGE:
             raise ValueError("Ages below 12 are not yet supported.")
@@ -62,6 +77,7 @@ def read_age_sex(user_input):
     except (AmbiguousAnswerException, ValueError) as e:
         print("{} Please repeat.".format(e))
         return read_age_sex(user_input)
+    print('pass')
     return age, sex
 
 
@@ -81,11 +97,13 @@ def read_complaint_portion(age, sex, auth_string, case_id, context, language_mod
         dict: Response from /parse endpoint.
     Please describe your complaints. If you're done, simply press Enter.
     """
-    text = read_input("Please describe you complaints. If you're done, simply press Enter")
-    # with st.chat_message("assistant"):
-    #     st.markdown(text)
-    if not text:
+    # text = read_input("Please describe you complaints. If you're done, simply press Enter")
+    text = "Please describe you complaints. If you're done, simply press Enter"
+  
+    if not text.strip():
         return None
+    # with st.chat_message("assistant"):
+    #         st.markdown(text)
     resp = apiaccess.call_parse(age, sex, text, auth_string, case_id, context,
                                 language_model=language_model)
     
@@ -141,6 +159,9 @@ def read_complaints(age, sex, auth_string, case_id, language_model=None):
     mentions = []
     context = [] 
     while True:
+        print('pass readcom')
+        
+        
         portion = read_complaint_portion(age, sex, auth_string, case_id, context,
                                          language_model=language_model)
         # print(portion)
@@ -159,8 +180,8 @@ def read_complaints(age, sex, auth_string, case_id, language_model=None):
 
         if mentions and portion is None:
             return mentions
-    with st.chat_message("assistant"):
-            st.markdown(context)
+    # with st.chat_message("assistant"):
+    #         st.markdown(context)
     # with st.chat_message("assistant"):
     #         st.markdown(portion)
 
@@ -170,7 +191,8 @@ def read_single_question_answer(question_text):
     single-choice question. Prompt the user with question text, read user's
     input and convert it to one of the expected evidence statuses: present,
     absent or unknown. Return None if no answer provided."""
-    answer = read_input(question_text)
+    # answer = read_input(question_text)
+    answer = question_text
     if not answer:
         return None
 
