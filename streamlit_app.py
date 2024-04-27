@@ -102,7 +102,7 @@ def create_pharmacy_map(user_location, nearest_pharmacies):
     folium.Marker(
         location=user_location,
         popup="Your Location",
-        icon=folium.Icon(color="green"),
+        icon=folium.Icon(color="orange"),
     ).add_to(m)
 
    # Add markers for nearest pharmacies with distance and name in the popup text
@@ -139,12 +139,17 @@ def set_png_as_page_bg(png_file):
     page_bg_img = '''
     <style>
     .main {
-        background-image: url("data:image/png;base64,%s");
+        background-image: url("data:image/svg+xml;base64,%s");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;
         height: 100vh;
+    }
+    
+    .stChatInput {
+      position: fixed;
+      bottom: 3rem;
     }
     </style>
     ''' % bin_str
@@ -157,17 +162,13 @@ def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
         return base64.b64encode(data).decode()
-
-# Add the necessary imports and function definitions here
-chat_history = []
-
+    
 def home_page():
     global chat_history
     # component1 = TabBar(tabs=["Home", "Group Members", "Project Background"], default=0)
     st.title("iChatOSHC")
     greeting = "Hi there! I'm iChatOSHC, here to assist you with your health and OSHC queries."
-    option_to_choose = " Choose from menu items Diagnosis, OSHC, or Pharmacy Location."
-
+    chat_history = []
     # Initialize chat history
     if "messages" not in st.session_state:
         st.session_state.messages = []
@@ -176,10 +177,10 @@ def home_page():
         st.session_state.menu_choice = None
         
     if "showSelect" not in st.session_state:
-      st.session_state.showSelect = False
+        st.session_state.showSelect = False
     
-    # if chat_history is None:
-    #   chat_history = []
+    if chat_history is None:
+        chat_history = []
 
     # Display warning message for new users
     if st.session_state.menu_choice is None:
@@ -229,95 +230,53 @@ def home_page():
         menu_choice = st.selectbox("What service are you looking for today?:", options=["Diagnosis", "OSHC", "Pharmacy Location"])
         if st.button("Submit"):
             st.session_state.menu_choice = menu_choice
-            st.experimental_rerun()
-    # if not st.session_state.menu_choice:
-    #     menu_choice = st.selectbox("Select a menu item:", options=["Diagnosis", "OSHC", "Pharmacy Location"])
-    #     if st.button("Submit"):
-    #         st.session_state.menu_choice = menu_choice
-    #         print(st.session_state)
+            st.rerun()
 
-            # st.empty()
-            
-            # with st.chat_message("assistant"):
-            #   st.markdown(f'OK {st.session_state.menu_choice}')
-            # Perform any actions you want after submission
-            
-            # st.experimental_rerun()
-          
-    # if st.session_state.menu_choice:
-    #   with st.chat_message("assistant"):
-    #     st.markdown(f'OK {st.session_state.menu_choice}')
+    
+    
+    if st.session_state.menu_choice is not None and not st.session_state.showSelect:
+        # Initialize the prompt message
+        prompt_message = f"Ready to discuss {st.session_state.menu_choice}? Let's chat!"
+    
+        # Adjust the prompt message based on the menu choice
+        if st.session_state.menu_choice == 'Diagnosis':
+            prompt_message = "Please provide your age and gender in the following format: \n[age] [gender]. For example: 30 male."
+        elif st.session_state.menu_choice == 'Pharmacy Location':
+            prompt_message = "Where can I find the nearest pharmacy? Just share your address, and I'll help you locate the closest one!"
+        elif st.session_state.menu_choice == 'OSHC':
+            prompt_message = "Have a question about OSHC? Let's chat!"
+        with st.chat_message("assistant"):
+            st.markdown(prompt_message)
+        # Set session state to prevent re-prompting
+        st.session_state.showSelect = True
+        st.session_state.messages.append({"role": "assistant", "content": prompt_message})
+        chat_history.append({"role": "assistant", "content": prompt_message})
+        # Display the assistant's initial prompt message
+    
 
     user_input = None
-    if st.session_state.menu_choice is not None and st.session_state.showSelect is False:
-      response = f"Ready to talk {st.session_state.menu_choice}? Let's chat!"
-      # with st.chat_message("assistant"):   
-      #   st.markdown(response)
-      if st.session_state.menu_choice == 'Diagnosis':
-        txt = "Please provide your age and gender in the following format: \n[age] [gender]\n\nFor example: 30 male\n\nNote: Ages below 12 and over 130 are not supported.\n"
-        response = txt
-        user_input = st.chat_input("What is your age and gender?")
-      elif st.session_state.menu_choice == 'Pharmacy Location':
-        txt = "Where can I find the nearest pharmacy? Just share your address, and I'll help you locate the closest one!"
-        response = txt
-        user_input = st.chat_input("What is your address?")
-      with st.chat_message("assistant"):   
-        st.markdown(response)
-      st.session_state.showSelect = True
-      st.session_state.messages.append({"role": "assistant", "content": response})
-    if st.session_state.menu_choice  == 'OSHC':
-      txt = "Have a question about OSHC? Let's chat!"
-      response = txt
-      user_input = st.chat_input("Q&A?")
-
-    # if st.session_state.menu_choice is not None:
-    #   user_input = st.chat_input("What's up?", key="user_input")  # Add a unique key for the input
-
-    #   # **Quit button below user input**
-    #   quit_button = st.button("Quit", key="quit_button")  # Add a unique key for the button
-
-    #   # Handle quit button click
-    #   if quit_button:
-    #       # Reset session state and rerun app
-    #       st.session_state.messages = []
-    #       st.session_state.menu_choice = None
-    #       st.session_state.showSelect = False
-    #       st.experimental_rerun()
-
+                # Get user input based on the menu choice
+    if st.session_state.menu_choice == 'Diagnosis':
+        user_input = st.chat_input("What's your age and gender?")
+    elif st.session_state.menu_choice == 'Pharmacy Location':
+        user_input = st.chat_input("What's your address?")
+    elif st.session_state.menu_choice == 'OSHC':
+        user_input = st.chat_input("What's your OSHC question?")
 
     if user_input:
         # Display user input in chat message container
         with st.chat_message("user"):
-            st.markdown(user_input)
-        
-        # if user_input.lower() == "quit":
-        #   # Reset the session state if "quit" is entered
-        #   st.session_state.messages = []
-        #   st.session_state.menu_choice = None
-        #   st.session_state.showSelect = False
-        #   with st.chat_message("assistant"):
-        #       st.markdown("Thanks for using the chatbot! Restarting...")
-        #   st.experimental_rerun()  # Re-run after reset
-
-          
-        # Generate response based on the menu choice
+            st.markdown(user_input) 
+        response = None
+            # Generate response based on the menu choice
         if st.session_state.menu_choice == 'OSHC':
             response = get_response(user_input)
-            
-          # with st.chat_message("assistant"):
-          #     st.markdown(f'OK {st.session_state.menu_choice}')
-          # response = f'OK {st.session_state.menu_choice}'
+  
         elif st.session_state.menu_choice == 'Diagnosis':
-          # st.session_state.Diag is No
-        #   response = chat.test(user_input)
             response = "diagnosis"
-            
         
-        # Handle Pharmacy Location logic
+            # Handle Pharmacy Location logic
         elif st.session_state.menu_choice == "Pharmacy Location":
-            
-            # Ask for the address
-    
             # Get the user's location from the address
             user_lat, user_lon = get_user_location(user_input)
 
@@ -328,49 +287,39 @@ def home_page():
                 nearest_pharmacies = find_nearest_pharmacies((user_location), yellow_pages, top_n=10)
 
                 if nearest_pharmacies:
-                  # Create the map with nearest pharmacies
-                  map_object = create_pharmacy_map(user_location, nearest_pharmacies)
-                  folium_static(map_object)
+                    response = "Here's the map with the nearest pharmacies and their distances."
+                    # Create the map with nearest pharmacies
+                    map_object = create_pharmacy_map(user_location, nearest_pharmacies)
+                    folium_static(map_object)
 
-                  # Display the top 10 nearest pharmacies in a table
-                  nearest_pharmacies_df = pd.DataFrame(
-                      [(pharmacy['pharmacy_name'], f"{distance:.2f} km") for pharmacy, distance in nearest_pharmacies],
-                      columns=['Pharmacy Name', 'Distance (km)']
-                  )
-                  st.subheader("Top 10 Nearest Pharmacies:")
-                  st.table(nearest_pharmacies_df)
-
-                  # Add the response to the chat history
-                  # st.session_state.messages.append(
-                  #     {"role": "assistant", "content": "Here's the map with the nearest pharmacies and their distances."}
-                  # )
-                  response = "Here's the map with the nearest pharmacies and their distances."
+                    # Display the top 10 nearest pharmacies in a table
+                    nearest_pharmacies_df = pd.DataFrame(
+                    [(pharmacy['pharmacy_name'], f"{distance:.2f} km") for pharmacy, distance in nearest_pharmacies],
+                    columns=['Pharmacy Name', 'Distance (km)']
+                    )
+                    st.subheader("Top 10 Nearest Pharmacies:")
+                    st.table(nearest_pharmacies_df)
                 else:
                     st.error("No pharmacies found near your location.")
-                    # st.session_state.messages.append(
-                    #     {"role": "assistant", "content": "No pharmacies found near your location."}
-                    # )
                     response = "No pharmacies found near your location."
             else:
                 st.warning("Address not found. Please check and try again.")
-                # st.session_state.messages.append(
-                #     {"role": "assistant", "content": "Address not found. Please try again."}
-                # )
                 response = "Address not found. Please try again."
 
-
         # Display bot response in chat message container
-        with st.chat_message("assistant"):
-            st.markdown(response)
-        
+        if response:
+             with st.container():
+                with st.chat_message("assistant"):
+                        st.markdown(response)
+
         # Add user input and bot response to chat history
         st.session_state.messages.append({"role": "user", "content": user_input})
         st.session_state.messages.append({"role": "assistant", "content": response})
-        
+
         chat_history.append({"role": "user", "content": user_input})
         chat_history.append({"role": "assistant", "content": response})
-        print(chat_history)
-
+        
+    
     # Button to go back to the greeting page
     if st.session_state.menu_choice is not None or user_input:
         if st.button("Quit"):
@@ -378,46 +327,64 @@ def home_page():
             st.session_state.messages = []
             st.session_state.menu_choice = None
             st.session_state.showSelect = False
-            st.experimental_rerun()
-            # component1 = TabBar(tabs=["Home", "Group Members", "Project Background"], default=0)
-            # main()
+            st.rerun()
 
 def group_members_page():
-    st.title("Group Members")
-    # Add content about your group members here (names, roles, etc.)
-    st.write("Narongvat Chingpayakmon 14229898  - Role")
-    st.write("Thirada Tiamklang 14337188 - Role")
-    st.write("Panalee Makha 14367914 - Role")
-    st.write("Thanchanok Phuawiriyakul 24582239 - Role")
-    st.write("Wongwara Wijara 14191732 - Role")
+    st.header("Meet The Creators", divider='rainbow')
+    st.write('Master of Data Science and Innovation,University of Technology Sydeny ')
+    st.image('iChatOSHC.svg', width=700)
+
 
 def project_background_page():
     st.title("Project Background")
-    # Add details about your project's background, motivation, etc.
-    st.write("Describe the purpose and goals of your project here.")
-    # ... (explain the project background and goals)
+    st.subheader("Improving Healthcare Access for International Students in NSW")
+    st.write(
+        """
+        New South Wales (NSW) welcomes millions of students from all over the world. If you're among them, you probably know about Overseas Student Health Cover (OSHC) insurance—it's essential for your visa requirements.
 
-# Main function
+        Navigating healthcare in a new country can be challenging. Different languages, new healthcare systems, and not knowing where to go when you're sick or need medicine can be stressful. Our application aims to address these challenges.
+
+        ### Our Solution
+
+        We created a web-based application to help international students in NSW with their healthcare needs. Here's what it offers:
+
+        1. **Symptom Diagnosis**: Using the Infermedica API, our application assesses symptoms to help you understand your health concerns. Note: this feature is currently in demo mode due to time-limited access to the API.
+
+        2. **Location-Based Pharmacy Finder**: Find the top 10 nearby pharmacies by entering your home address. This ensures convenient access to medication.
+
+        3. **OSHC Insurance Information**: We provide detailed information on Medibank and Bupa OSHC insurance policies, the most popular choices among international students in NSW. This helps you make informed decisions about your healthcare needs.
+
+        We're excited to continue developing this application to make healthcare access easier for international students in NSW.
+        """
+    )
+
+
 def main():
     # Set background image
-    set_png_as_page_bg('final.png')  # Replace with your background image path
+    set_png_as_page_bg('Oversea Student Health Chatbot (Website)-2.svg') 
 
-    # Create a tab bar
-    component1 = TabBar(tabs=["Home", "Group Members", "Project Background"], default=0)
-
-    # Handle tab selection
-    if component1 == 0:
+#    Create a sidebar with radio buttons for navigation
+    tab1, tab2, tab3 = st.tabs(["Home", "Group Members", "Project Background"])
+    with tab1:
         home_page()
-    elif component1 == 1:
+
+    with tab2:
         group_members_page()
-    elif component1 == 2:
+
+    with tab3:
         project_background_page()
-
-
-
-# Add the OSHC_chatbot() function here if needed
-
-if __name__ == "__main__":
+        
+        
     # component1 = TabBar(tabs=["Home", "Group Members", "Project Background"], default=0)
 
+    # # Handle tab selection
+    # if component1 == 0:
+    #     home_page()
+    # elif component1 == 1:
+    #     group_members_page()
+    # elif component1 == 2:
+    #     project_background_page()
+
+
+if __name__ == "__main__":
     main()
