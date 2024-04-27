@@ -21,7 +21,7 @@ import pandas as pd
 import base64
 import streamlit as st
 from st_tabs import TabBar
-component1 = TabBar(tabs=["Home", "Group Members", "Project Background"], default=0)
+# component1 = TabBar(tabs=["Home", "Group Members", "Project Background"], default=0)
 
 # ================= OSHC =============================
 
@@ -301,9 +301,9 @@ def home_page():
 
           
         # Generate response based on the menu choice
-        elif st.session_state.menu_choice == 'OSHC':
+        if st.session_state.menu_choice == 'OSHC':
             response = get_response(user_input)
-            main()
+            
           # with st.chat_message("assistant"):
           #     st.markdown(f'OK {st.session_state.menu_choice}')
           # response = f'OK {st.session_state.menu_choice}'
@@ -311,11 +311,11 @@ def home_page():
           # st.session_state.Diag is No
         #   response = chat.test(user_input)
             response = "diagnosis"
-            main()
+            
         
         # Handle Pharmacy Location logic
         elif st.session_state.menu_choice == "Pharmacy Location":
-            main()
+            
             # Ask for the address
     
             # Get the user's location from the address
