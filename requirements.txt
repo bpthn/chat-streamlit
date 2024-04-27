@@ -12,3 +12,5 @@ requests
 streamlit-geolocation
 geopy
 streamlit_chat
+streamlit-option-menu
+st-tabs
