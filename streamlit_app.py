@@ -147,10 +147,7 @@ def set_png_as_page_bg(png_file):
         height: 100vh;
     }
     
-    .stChatInput {
-      position: fixed;
-      bottom: 3rem;
-    }
+    
     </style>
     ''' % bin_str
 
@@ -364,26 +361,26 @@ def main():
     set_png_as_page_bg('Oversea Student Health Chatbot (Website)-2.svg') 
 
 #    Create a sidebar with radio buttons for navigation
-    tab1, tab2, tab3 = st.tabs(["Home", "Group Members", "Project Background"])
-    with tab1:
-        home_page()
-
-    with tab2:
-        group_members_page()
-
-    with tab3:
-        project_background_page()
-        
-        
-    # component1 = TabBar(tabs=["Home", "Group Members", "Project Background"], default=0)
-
-    # # Handle tab selection
-    # if component1 == 0:
+    # tab1, tab2, tab3 = st.tabs(["Home", "Group Members", "Project Background"])
+    # with tab1:
     #     home_page()
-    # elif component1 == 1:
+
+    # with tab2:
     #     group_members_page()
-    # elif component1 == 2:
+
+    # with tab3:
     #     project_background_page()
+        
+        
+    component1 = TabBar(tabs=["Home", "Group Members", "Project Background"], default=0)
+
+    # Handle tab selection
+    if component1 == 0:
+        home_page()
+    elif component1 == 1:
+        group_members_page()
+    elif component1 == 2:
+        project_background_page()
 
 
 if __name__ == "__main__":
