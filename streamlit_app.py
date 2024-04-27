@@ -162,26 +162,22 @@ def get_base64_of_bin_file(bin_file):
 def sampleDiag():
     chat_ex = [
                 {"role": "assistant", "content": "Please provide your age and gender in the following format: [age] [gender]\nFor example: 30 male"},
-                {"role": "user", "content": "28 Male"},
-                {"role": "assistant", "content": "Noting: +Headache"},
+                {"role": "user", "content": "30 Male"},
                 {"role": "assistant", "content": "Please describe you complaints. If you're done, simply press Enter:"},
-                {"role": "user", "content": "mouth ulcer"},
-                {"role": "assistant", "content": "Noting: +Mouth ulcer"},
-                {"role": "assistant", "content": "Please describe you complaints. If you're done, simply press Enter:"},
-                {"role": "user", "content": "runny nose"},
-                {"role": "assistant", "content": "Noting: +Nasal catarrh"},
+                {"role": "user", "content": "I have a cough and runny nose"},
+                {"role": "assistant", "content": "Noting: +Cough, +Nasal catarrh"},
                 {"role": "assistant", "content": "Please describe you complaints. If you're done, simply press Enter:"},
                 {"role": "user", "content": ""},
                 {"role": "assistant", "content": "Before we proceed with symptom diagnosis, please answer the following questions with 'y' for yes or 'n' for no:"},
-                {"role": "assistant", "content": "1. Are the headaches severe?"},
+                {"role": "assistant", "content": "1. Do you have a dry cough, without phlegm or mucus?"},
                 {"role": "user", "content": "No"},
-                {"role": "assistant", "content": "2. Has the runny nose lasted 3 months or more?"},
-                {"role": "user", "content": "No"},
-                {"role": "assistant", "content": "3. Has the runny nose lasted less than 3 months?"},
+                {"role": "assistant", "content": "2. Has the cough lasted less than 3 weeks?"},
                 {"role": "user", "content": "Yes"},
-                {"role": "assistant", "content": "4. Are there any changes on your skin, e.g., a rash, growth, bump, lump, or a change in colour?"},
+                {"role": "assistant", "content": "3. Has the runny nose lasted 3 months or more?"},
                 {"role": "user", "content": "No"},
-                {"role": "assistant", "content": "5. Do you have a fever?"},
+                {"role": "assistant", "content": "4. Has the runny nose lasted less than 3 months?"},
+                {"role": "user", "content": "Yes"},
+                {"role": "assistant", "content": "5. Do you have a fever? "},
                 {"role": "user", "content": "No"},
                 {"role": "assistant", "content": "6. Is the mucus that's coming out of your nose clear white?"},
                 {"role": "user", "content": "Yes"},
@@ -189,16 +185,18 @@ def sampleDiag():
                 {"role": "user", "content": "No"},
                 {"role": "assistant", "content": "8. Is the mucus that's coming out of your nose yellow or green?"},
                 {"role": "user", "content": "No"},
-                {"role": "assistant", "content": "9. Have you been sneezing?"},
-                {"role": "user", "content": "Yes"},
-                {"role": "assistant", "content": "10. Have you been having sneezing attacks, where sneezes come one after another?"},
+                {"role": "assistant", "content": "9. Are your eyes watery, or is either eye making more tears than usual?"},
                 {"role": "user", "content": "No"},
+                {"role": "assistant", "content": "10. Have you been sneezing?"},
+                {"role": "user", "content": "Yes"},
                 {
                 "role": "assistant",
                 "content": "Diagnoses:\n"
-                        "Common cold (53.29%), Acute viral rhinosinusitis (32.61%), Bruxism (30.55%), Aphthous stomatitis (17.06%), and Oral herpes (13.46%).\n"
+                        "Common cold (63.48%),and Acute viral rhinosinusitis (20.84%).\n"
                         "Considering the likelihood of Common cold and the symptoms you've described.\n"
-                        "It's recommended that you take a Self-care: Monitor symptoms and consult a doctor if they worsen."
+                        "It's recommended that you take a Self-care: Monitor symptoms and consult a doctor if they worsen.\n"
+                        "Please note that this symptom diagnosis is a guide and should not be solely relied upon.\n"
+                        "If you have any concerns or if your symptoms worsen, consider seeking medical attention from a healthcare provider."
                 }
             ]
     for message in chat_ex:
