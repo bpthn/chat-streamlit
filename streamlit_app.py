@@ -214,6 +214,11 @@ def sampleDiag():
         else:
             with st.chat_message("user"):
                 st.markdown(message["content"])
+                
+def videoDiagnosis():
+    video_file = open('diagnosis.mp4', 'rb')
+    video_bytes = video_file.read()
+    st.video(video_bytes)
             
 def home_page():
     global chat_history
@@ -344,16 +349,21 @@ def home_page():
         if st.session_state.menu_choice == 'Diagnosis':
             # prompt_message = "Please provide your age and gender in the following format: \n[age] [gender]. For example: 30 male."
             # user_input = st.chat_input("What's your age and gender?")
-            prompt_message = "This is example of Diagnosis chatbot"
-            sampleDiag()
+            # prompt_message = ""
+            videoDiagnosis()
+            
+            # sampleDiag()
             
             
         elif st.session_state.menu_choice == 'Pharmacy Location':
             prompt_message = "Where can I find the nearest pharmacy? Just share your address, and I'll help you locate the closest one!"
+            with st.chat_message("assistant"):
+                st.markdown(prompt_message)
         elif st.session_state.menu_choice == 'OSHC':
             prompt_message = "Have a question about OSHC? Let's chat!"
-        with st.chat_message("assistant"):
-            st.markdown(prompt_message)
+            with st.chat_message("assistant"):
+                st.markdown(prompt_message)
+        
         # Set session state to prevent re-prompting
         st.session_state.showSelect = True
         st.session_state.messages.append({"role": "assistant", "content": prompt_message})
