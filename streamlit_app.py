@@ -76,8 +76,8 @@ def get_user_location(address):
     else:
         return None, None
 
-# Define the function to find the nearest pharmacies based on user location
-def find_nearest_pharmacies(user_location, pharmacies, top_n=10):
+# Function to find the nearest pharmacies based on user location with distance check
+def find_nearest_pharmacies(user_location, pharmacies, top_n=20, max_distance_km=10):
     distances = []
     for _, pharmacy in pharmacies.iterrows():
         try:
@@ -89,9 +89,17 @@ def find_nearest_pharmacies(user_location, pharmacies, top_n=10):
         except (ValueError, KeyError):
             continue  # Skip if latitude or longitude is invalid
     
-    # Sort pharmacies by distance and return top N
+    # Sort pharmacies by distance
     sorted_distances = sorted(distances, key=lambda x: x[1])
-    return sorted_distances[:top_n]
+
+    # Get the nearest pharmacies within the top_n limit
+    nearest_pharmacies = sorted_distances[:top_n]
+
+    # Check if all nearest pharmacies are more than the max_distance_km
+    if all(distance > max_distance_km for _, distance in nearest_pharmacies):
+        return []  # Return an empty list if no pharmacies are within the allowed distance
+    
+    return nearest_pharmacies
 
 # Function to create a Folium map with nearest pharmacies
 def create_pharmacy_map(user_location, nearest_pharmacies):
@@ -233,8 +241,42 @@ def home_page():
     else:
         greeting = "Hi there! I'm iChatOSHC, here to assist you with your health and OSHC queries."
 
-    # Instructions box
-    with st.popover("See instructions 📝"):
+    # # Instructions box
+    # with st.popover("See instructions 📝"):
+    #     st.markdown("### How to Use")
+    #     st.markdown("""
+    #     To use the chatbot:\n
+    #     1. Select one of the menu items: Diagnosis, OSHC, or Pharmacy Location.\n
+    #     2. Follow the prompts or instructions provided.\n
+    #     3. You can ask questions, seek diagnosis assistance, or find nearby pharmacies.\n
+    #     4. Enjoy the chatbot experience!\n
+    #     """)
+
+    #     # Tips to Use
+    #     st.markdown("### Tips to Use")
+    #     st.markdown("""
+    #     - Be specific and clear when asking questions or providing information.\n
+    #     - Follow the format or instructions provided for each service.\n
+    #     - If you encounter any issues, feel free to reach out for assistance.\n
+    #     """)
+    # with st.popover("Privacy and Ethics 🛡️"):   
+    #     st.markdown("### Privacy Concerns")
+    #     st.markdown("""
+    #     - We collect only the information necessary for our services (like location address). We do not have access to your current location, and we don't use cookies or track any of your activities.
+    #     - We employ secure methods for storing and transmitting data, such as using private GitHub repositories.
+    #     - Access to sensitive data is restricted to authorized personnel only, ensuring data security.
+    #     """)
+
+        # st.markdown("### Ethical Considerations")
+        # st.markdown("""
+        # - Our project is designed to ensure fairness and non-discrimination.
+        # - We commit to using data ethically and solely for educational purposes.
+        # - We do not use data for any purposes not explicitly agreed upon by users.
+        # """)
+    # Create two columns for side-by-side content
+    col1, col2 = st.columns(2)
+    with col1:
+       with st.popover("See instructions 📝"):
         st.markdown("### How to Use")
         st.markdown("""
         To use the chatbot:\n
@@ -251,7 +293,23 @@ def home_page():
         - Follow the format or instructions provided for each service.\n
         - If you encounter any issues, feel free to reach out for assistance.\n
         """)
+    # First popover with Privacy and Ethics content
+    with col2:
+        with st.popover("Privacy and Ethics 🛡️"):
+            st.markdown("### Privacy Concerns")
+            st.markdown("""
+            - We collect only the information necessary for our services (e.g., location data).
+            - We employ secure methods for data storage and transmission.
+            - Access to sensitive data is restricted to authorized personnel only.
+            """)
 
+            st.markdown("### Ethical Considerations")
+            st.markdown("""
+            - Our project is designed for fairness and non-discrimination.
+            - We commit to using data ethically and for educational purposes.
+            - We do not use data for purposes not explicitly agreed upon by users.
+            """)
+    
     # Display warning messages for each menu option
     if st.session_state.menu_choice == 'Diagnosis':
         st.warning("Medical information provided by this API is for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a physician or qualified health provider for medical concerns.")
@@ -337,9 +395,9 @@ def home_page():
                 user_location = (user_lat, user_lon)
 
                 # Find the nearest pharmacies
-                nearest_pharmacies = find_nearest_pharmacies((user_location), yellow_pages, top_n=10)
+                nearest_pharmacies = find_nearest_pharmacies((user_location), yellow_pages, top_n=20)
 
-                if nearest_pharmacies:
+                if any(distance <= 10 for _, distance in nearest_pharmacies):
                     response = "Here's the map with the nearest pharmacies and their distances."
                     # Create the map with nearest pharmacies
                     map_object = create_pharmacy_map(user_location, nearest_pharmacies)
@@ -347,17 +405,27 @@ def home_page():
 
                     # Display the top 10 nearest pharmacies in a table
                     nearest_pharmacies_df = pd.DataFrame(
-                    [(pharmacy['pharmacy_name'], f"{distance:.2f} km") for pharmacy, distance in nearest_pharmacies],
+                    [(pharmacy['pharmacy_name'], f"{distance:.2f} km") for pharmacy, distance in nearest_pharmacies[:10]],
                     columns=['Pharmacy Name', 'Distance (km)']
-                    )
+                     )
                     st.subheader("Top 10 Nearest Pharmacies:")
                     st.table(nearest_pharmacies_df)
+                    # Additional response indicating the nearest pharmacy
+                    nearest_pharmacy_name = nearest_pharmacies_df.iloc[0, 0]  # Get the name of the nearest pharmacy
+                    nearest_pharmacy_distance = nearest_pharmacies_df.iloc[0, 1]  # Get the distance of the nearest pharmacy
+
+                    # Additional response indicating the nearest pharmacy
+                    additional_response = f"The nearest pharmacy from your location is **{nearest_pharmacy_name}** at a distance of {nearest_pharmacy_distance}."
+                    response += f"\n{additional_response}"  # Append the additional response to the main response
                 else:
-                    st.error("No pharmacies found near your location.")
-                    response = "No pharmacies found near your location."
+                    st.error("No pharmacies found within 10 km of your location.")
+                    response = "No pharmacies found within 10 km of your location."
             else:
-                st.warning("Address not found. Please check and try again.")
-                response = "Address not found. Please try again."
+                st.error("Could not find the address. Please check and try again.")
+                response = "Could not find the address. Please check and try again."
+        else:
+            st.warning("Address not found. Please check and try again. Here is the suggest format: 123 Street Name, Suburb, NSW")
+            response = "Address not found. Please check and try again. Here is the suggest format: 123 Street Name, Suburb, NSW"
 
         # Display bot response in chat message container
         if response:
