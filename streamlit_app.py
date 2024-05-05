@@ -83,9 +83,14 @@ def find_nearest_pharmacies(user_location, pharmacies, top_n=20, max_distance_km
         try:
             latitude = float(pharmacy['latitude'])
             longitude = float(pharmacy['longitude'])
+            address = pharmacy['pharmacy_name']
+            suburb = pharmacy["suburb"]
+            postal_code = pharmacy["postal_code"]
+            full_address = f"{address}, {suburb}, {postal_code}"
+            tel = pharmacy["tel"]
             pharmacy_location = (latitude, longitude)
             distance = geodesic(user_location, pharmacy_location).kilometers
-            distances.append((pharmacy, distance))
+            distances.append((pharmacy, distance, full_address, tel))
         except (ValueError, KeyError):
             continue  # Skip if latitude or longitude is invalid
     
@@ -95,10 +100,11 @@ def find_nearest_pharmacies(user_location, pharmacies, top_n=20, max_distance_km
     # Get the nearest pharmacies within the top_n limit
     nearest_pharmacies = sorted_distances[:top_n]
 
-    # Check if all nearest pharmacies are more than the max_distance_km
-    if all(distance > max_distance_km for _, distance in nearest_pharmacies):
-        return []  # Return an empty list if no pharmacies are within the allowed distance
-    
+    # Filter by max_distance_km
+    nearest_pharmacies = [
+        (pharmacy, distance, full_address, tel) for pharmacy, distance, full_address, tel in nearest_pharmacies if distance <= max_distance_km
+    ]
+
     return nearest_pharmacies
 
 # Function to create a Folium map with nearest pharmacies
@@ -113,21 +119,29 @@ def create_pharmacy_map(user_location, nearest_pharmacies):
         icon=folium.Icon(color="orange"),
     ).add_to(m)
 
-   # Add markers for nearest pharmacies with distance and name in the popup text
-    for pharmacy, distance in nearest_pharmacies:
-        popup_text = f"{pharmacy['pharmacy_name']} - Distance: {distance:.2f} km"
+   # Add markers for nearest pharmacies with distance and full address in the popup text
+    for pharmacy, distance, full_address, tel in nearest_pharmacies:
+        pharmacy_name = pharmacy["pharmacy_name"]
+        popup_text = f"{pharmacy_name} in {distance:.2f} km\n Address: {full_address} \n Contact: {tel}"
+        
         folium.Marker(
-            location=(pharmacy['latitude'], pharmacy['longitude']),
+            location=(pharmacy["latitude"], pharmacy["longitude"]),
             icon=folium.Icon(color="blue"),
             popup=popup_text,
         ).add_to(marker_cluster)
 
-    # Highlight the nearest pharmacy with a red icon and a popup with distance and name
-    nearest_pharmacy, nearest_distance = nearest_pharmacies[0]
-    nearest_pharmacy_location = (nearest_pharmacy['latitude'], nearest_pharmacy['longitude'])
+    # Highlight the nearest pharmacy with a special icon and popup
+    nearest_pharmacy, nearest_distance, nearest_full_address, nearest_pharmacy_contact = nearest_pharmacies[0]
+    nearest_pharmacy_location = (nearest_pharmacy["latitude"], nearest_pharmacy["longitude"])
+    popup_text = (
+        f"Nearest Pharmacy: {nearest_pharmacy['pharmacy_name']} in {nearest_distance:.2f} km\n"
+        f"Address: {nearest_full_address}.\n"
+        f"Contact: {nearest_pharmacy_contact}"
+    )
+    
     folium.Marker(
         location=nearest_pharmacy_location,
-        popup=f"Nearest Pharmacy: {nearest_pharmacy['pharmacy_name']} - Distance: {nearest_distance:.2f} km",
+        popup=popup_text,
         icon=folium.Icon(color="red"),
     ).add_to(m)
 
@@ -403,39 +417,46 @@ def home_page():
 
             if user_lat and user_lon:
                 user_location = (user_lat, user_lon)
-
+                
                 # Find the nearest pharmacies
                 nearest_pharmacies = find_nearest_pharmacies((user_location), yellow_pages, top_n=20)
-
-                if any(distance <= 10 for _, distance in nearest_pharmacies):
-                    response = "Here's the map with the nearest pharmacies and their distances."
+                response = "Here's the map with the nearest pharmacies and their distances."
                     # Create the map with nearest pharmacies
-                    map_object = create_pharmacy_map(user_location, nearest_pharmacies)
-                    folium_static(map_object)
+                map_object = create_pharmacy_map(user_location, nearest_pharmacies)
+                folium_static(map_object)
 
-                    # Display the top 10 nearest pharmacies in a table
+                if len(nearest_pharmacies) > 0:
                     nearest_pharmacies_df = pd.DataFrame(
-                    [(pharmacy['pharmacy_name'], f"{distance:.2f} km") for pharmacy, distance in nearest_pharmacies[:10]],
-                    columns=['Pharmacy Name', 'Distance (km)']
-                     )
+                        [
+                        (pharmacy["pharmacy_name"], full_address, tel, f"{distance:.2f} km")
+                        for pharmacy, distance, full_address, tel in nearest_pharmacies[:10]
+                        ],
+                        columns=["Pharmacy Name", "Full Address", "Contact", "Distance (km)"],  # Distance is the last column
+                    )
                     st.subheader("Top 10 Nearest Pharmacies:")
                     st.table(nearest_pharmacies_df)
-                    # Additional response indicating the nearest pharmacy
-                    nearest_pharmacy_name = nearest_pharmacies_df.iloc[0, 0]  # Get the name of the nearest pharmacy
-                    nearest_pharmacy_distance = nearest_pharmacies_df.iloc[0, 1]  # Get the distance of the nearest pharmacy
 
-                    # Additional response indicating the nearest pharmacy
-                    additional_response = f"The nearest pharmacy from your location is **{nearest_pharmacy_name}** at a distance of {nearest_pharmacy_distance}."
-                    response += f"\n{additional_response}"  # Append the additional response to the main response
+                    # Identify the nearest pharmacy
+                    nearest_pharmacy_name = nearest_pharmacies_df.iloc[0, 0]  # Get the name of the nearest pharmacy
+                    nearest_pharmacy_address = nearest_pharmacies_df.iloc[0, 1]  # Get the distance of the nearest pharmacy
+                    nearest_pharmacy_tel = nearest_pharmacies_df.iloc[0, 2]  # Get the address of the nearest pharmacy
+                    nearest_pharmacy_distance= nearest_pharmacies_df.iloc[0, 3]  # Get the contac of the nearest pharmacy
+                    additional_response = (
+                        f"The nearest pharmacy from your location is **{nearest_pharmacy_name}**\n "
+                        f"at a distance of {nearest_pharmacy_distance}.\n "
+                        f"The full address is: {nearest_pharmacy_address}.\n"
+                        f"The contact number is: {nearest_pharmacy_tel}"
+)
+
+                    # Append the additional response to the main response without redundancy
+                    response += f"\n{additional_response}"
                 else:
                     st.error("No pharmacies found within 10 km of your location.")
                     response = "No pharmacies found within 10 km of your location."
             else:
                 st.error("Could not find the address. Please check and try again.")
                 response = "Could not find the address. Please check and try again."
-        else:
-            st.warning("Address not found. Please check and try again. Here is the suggest format: 123 Street Name, Suburb, NSW")
-            response = "Address not found. Please check and try again. Here is the suggest format: 123 Street Name, Suburb, NSW"
+
 
         # Display bot response in chat message container
         if response:
