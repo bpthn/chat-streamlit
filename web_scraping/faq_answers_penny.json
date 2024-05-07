@@ -1,0 +1,125 @@
+{  
+    "intents": [
+      {
+          "tag": "Medi Student Visa Subclasses",
+          "responses": [
+              "Medibank OSHC may only be purchased by people who are or will be in Australia on the following student visa subclasses:\n- Visa subclass 500: Student\n- Visa subclass 570: Independent ELICOS Sector\n- Visa subclass 571: Schools Sector\n- Visa subclass 572: Vocational Education and Training Sector\n- Visa subclass 573: Higher Education Sector\n- Visa subclass 574: Postgraduate Research Sector\n- Visa subclass 575: Non Award Sector\n- Visa subclass 576: Foreign Affairs or Defence Sector\n\nVisa subclasses are subject to change by the government from time to time."
+          ]
+      },
+      {
+          "tag": "waiting period",
+          "responses": [
+              "That depends on the types of services or items included on your cover.\n2 months* - All included services - except those set out below\n6 months - Optical Appliances, Ultra bonus for out of pocket expenses\n12 months - Pre-existing conditions. However, the 12 month pre-existing condition waiting period does not apply to hospital or hospital substitute treatment for psychiatric treatment, rehabilitation treatment or palliative care, Obstetrics-related services, Dental Treatment and Major dental services including surgical extractions, Orthodontic treatment, CPAP type devices, Breathing appliances\n24 months - Blood glucose monitors\n36 months - Hearing aids, Laser eye surgery\n* If you have an accident after joining us or changing cover and require treatment, we'll waive the 2 month waiting period."
+          ]
+     },
+     {
+          "tag": "waiting period",
+          "responses": [
+              "Waiting periods will apply if you're a new member, you're rejoining Medibank after not having health cover for some time, or you're changing to a higher level of cover (either within Medibank or transferring from another registered Australian health fund).\nIf you're changing to a higher level of cover, you'll still be entitled to benefits at the level of your former cover while you're serving any waiting periods on your new cover if:\n1. Those services were included under your old cover; and\n2. You've already served the waiting periods that applied under your old cover.\nWaiting periods may apply to some of our betterhealth programs."
+          ]
+      },
+      {
+          "tag": "waiting period",
+          "responses": [
+              "All health funds have waiting periods. In short, a waiting period is a period of time you need to wait after taking out your cover before you can receive benefits for services or items covered.\nYou’re not able to receive benefits for any items or services you might have obtained while you’re serving a waiting period or before you joined Medibank."
+          ]
+      },
+      {
+          "tag": "Medi Inpatient",
+          "responses": [
+              "An Inpatient is someone who is formally admitted to a registered hospital (including day surgery) to receive medical care or treatment, or for the purpose of obtaining professional attention. This includes Same-day admissions.\nMedibank OSHC pays Benefits when a member is treated in a private hospital as an Inpatient and the treatment is Included under the cover (refer to your Cover Summary)."
+          ]
+      },
+      {
+          "tag": "Medi Outpatient",
+          "responses": [
+              "Services that are provided where a member is not admitted to hospital are called Outpatient services. These include:\n- Non-admitted hospital services such as visits to hospital accident and emergency departments or visits to a hospital Outpatient clinic, and\n- Out-of-hospital medical services such as those provided in a doctor’s surgery, specialist’s clinic, or by a general practitioner (GP)."
+          ]
+      },
+      {
+          "tag": "Informed financial consent",
+          "responses": [
+              "Before going to the hospital, it’s important to ask your doctor(s) and the hospital about any potential out-of-pocket expenses you might incur.\nThis information should be provided in writing before your treatment or hospital admission and is known as ‘informed financial consent’.\nIf you’re admitted in an emergency, there may not be time for the hospital or doctor(s) to seek your informed financial consent. Information about your out-of-pocket expenses should be provided as soon as possible after you receive treatment."
+          ]
+      },
+      {
+          "tag": "Hospital accommodation Benefits ",
+          "responses": [
+              "The Benefits we pay towards hospital accommodation will depend on whether the hospital admission is for an Included or Excluded service (refer to your Cover Summary), and the type of hospital you’re admitted to as explained below.\nIncluded services – we pay Benefits towards Same-day and overnight hospital accommodation and intensive care.\nExcluded services – no Benefits are payable."
+        ]
+      },
+    {
+          "tag": "Hospital accommodation Exclusions",
+          "responses": [
+            "Hospital accommodation Benefits do not include things such as TV hire, newspapers, parking, and take-home items, e.g., crutches. Medibank will not pay Benefits for these (or similar) items and services. The hospital should discuss any charges with you."
+        ]
+    },
+    {
+          "tag": "Waiting period waiver",
+          "responses": [
+              "Where a 12-month Waiting period applies to Hospital treatment, it may be waived where a medical practitioner certifies, and Medibank agrees, that Emergency Treatment was required."
+        ]
+    },
+    {
+          "tag": "Emergency Treatment",
+          "responses": [
+            "Emergency Treatment means the treatment of any of the following Conditions:\n- A risk of serious morbidity or mortality and requiring urgent assessment and resuscitation\n- Suspected acute organ or system failure\n- An illness or injury where the viability of function of a body part or organ is acutely threatened\n- A drug overdose, toxic substance, or toxin effect\n- Psychiatric disturbance whereby the health of the patient or other people is at immediate risk\n- Severe pain where the viability or function of a body part or organ is suspected to be acutely threatened\n- Acute haemorrhaging requiring urgent assessment and treatment, or\n- A Condition that requires immediate admission to avoid imminent morbidity or mortality."
+          ]
+    },
+    {
+        "tag": "Prescription medicines",
+        "responses": [
+            "Medibank OSHC can help pay towards eligible Prescription medicines prescribed by a doctor (GP or specialist)."
+        ]
+    },
+    {
+        "tag": "Medicines payable",
+        "responses": [
+            "You will need to pay a set contribution amount (also known as a co-payment) towards the cost of eligible Prescription medicines, before we pay any Benefits.\nIf the charge is higher than the Benefit we pay, the difference will be an out-of-pocket expense. Refer to your Cover Summary for information on the member contribution, maximum benefits per item, and annual limits that apply to your membership."
+        ]
+    },
+    {
+        "tag": "Medicines not payable",
+        "responses": [
+            "Benefits are not payable for the following:\n- For medicines not prescribed by a doctor (GP or specialist) to treat an illness, injury, or Condition\n- For medicines available without a prescription\n- For contraceptives prescribed for contraceptive use only\n- For medicines prescribed for Cosmetic purposes\n- For any over-the-counter medicines, vitamins, or herbal medicines\n- For any medicine not approved by the TGA (Therapeutic Goods Administration) or listed on the ARTG (Australian Register of Therapeutic Goods) for the purpose for which it has been prescribed,\n- For any Prescription medicines which fall within a Benefit exclusion.\nIt's important to note that you may have large out-of-pocket expenses if you need treatment that uses high-cost Prescription medicines, such as those used in oncology (cancer treatment)."
+      ]
+    },
+    {
+      "tag": "Hospital claims",
+      "responses": [
+        "Medibank has arrangements with most hospitals for Benefits to be paid direct to the hospital on a member’s behalf. This generally means you won't need to submit a separate claim for hospital Benefits.\nIf needed, hospital claims can be submitted via post with a completed claim form or at a Medibank store. Where claims are submitted in-store, we’ll assess them separately (at a later date) and pay Benefits to you or the hospital, as appropriate.\nIf a claim form is sent by post, the claim form (including receipts) can be sent to: Medibank OSHC GPO 2984 Melbourne VIC 3001."
+      ]
+    },
+    {
+        "tag": "Medibank claims",
+        "responses": [
+            "A Medibank OSHC Direct Billing provider is a doctor, specialist, or other medical provider that has an agreement with Medibank to send the bill directly to us.\nThis helps reduce or eliminate the upfront payment you would normally be required to make at the time of your appointment. Depending on the doctor you see, you may on occasion experience an out-of-pocket expense above the Benefit paid by Medibank.\nBefore booking your consultation, check with the Direct Billing provider whether any out-of-pocket expenses may apply. Remember to take your membership card and photo identification.\nTo find a Direct Billing provider visit medibankoshc.com.au/find-provider.\nIt’s important to be aware that our agreements with Direct Billing providers are subject to change without notice. You should confirm prior to receiving treatment whether your provider is part of our Direct Billing network."
+        ]
+    },
+    {
+        "tag": "Claims documentation",
+        "responses": [
+            "Medibank retains all account and receipt documentation for the period required by law. Medibank will, on request, provide a Statement of Benefits which may assist you for taxation purposes if applicable. For online claims, members are required to retain receipts, for the period specified in OMS terms and conditions, for verification purposes."
+        ]
+    },
+    {
+        "tag": "Time limit claim",
+        "responses": [
+            "Claims must be submitted within two years of the date of service or the date the item was purchased.",
+            "No Benefits will be paid for any claims submitted outside 2 years timeframe."
+        ]
+    },
+    {
+        "tag": "Ambulance services - Benefits payable",
+        "responses": [
+            "Where you need an Ambulance and your medical Condition is such that you can’t be transported any other way, we’ll pay towards services provided by a Medibank approved Ambulance provider:\n- When Ambulance transportation to a hospital or other approved facility is required to receive immediate professional attention\n- When an Ambulance is called to provide immediate professional attention but transport by Ambulance isn’t needed\n- When, as an Inpatient, the hospital requires you to be transferred from one hospital to another (excluding non-medically necessary Ambulance transfers between public hospitals), and\n- For transport by air Ambulance, where pre-approval has been obtained from Medibank by the air Ambulance provider."
+        ]
+    },
+    {
+        "tag": "Ambulance services - Benefits not payable",
+        "responses": [
+            "Medibank does not pay Benefits for any Ambulance service not described under ‘When are Benefits payable?’. This includes:\n- Ambulance services where immediate professional attention is not required (e.g. general patient transportation)\n- Any Ambulance transport required after discharge from hospital (e.g. transport from hospital to home)\n- Inter-hospital transfers when, as an Inpatient, you’re transferred from one public hospital to another public hospital for non-medically necessary reasons\n- Any Ambulance costs that are fully covered by a third-party arrangement, such as an Ambulance subscription or federal/state/territory Ambulance transportation scheme, WorkCover, or the motor vehicle accident authority, and\n- Any air Ambulance services that are fully subsidised, such as South Care or LifeFlight."
+        ]
+    }
+        ]     
+}
